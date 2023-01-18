@@ -14,51 +14,68 @@ public class BigNumber
     [SerializeField]
     private int tenpow = 0;
 
+    //Copy constructor
     public BigNumber(BigNumber other)
     {
         multiplier = other.multiplier;
         tenpow = other.tenpow;
     }
 
+    //Default constructor (uses default values for vars declared above)
     public BigNumber() { }
 
+    //Explicit constructor
     public BigNumber(float mult, int tp)
     {
         multiplier = mult;
         tenpow = tp;
     }
 
-    //Display stuff
+    //Static variable used to control display type (can be either scientific notation, or named notation)
     private static DisplayType disp = DisplayType.SCIENTIFIC;
+
+    //String array of names for each 10^3x power starting at million
     private readonly static string[] powNames =
         { "Million", "Billion", "Trillion", "Quadrillion", "Quintillion", "Sextillion", "Septillion", "Octillion", "Nonillion", "Decillion",
           "Undecillion", "Dodecillion", "Tredicillion", "Quattuordecillion", "Quindecillion", "Sexdecillion", "Septen-decillion", "Octodecillion",
           "Novemdecillion", "Vigintillion" };
+
+    //Converts a BigNumber to a string using either scientific, numeric, or named notation
     public override string ToString()
     {
+        //Always use numeric notation if we are less than 1 million
         if (tenpow <= 5)
         {
             return ((int)(multiplier * Mathf.Pow(10, tenpow))).ToString();
         }
 
+        //Sample scientific notation number (sci notation always follows this format):
+        //123450000 = 123.45 million = 1.2345e+8
         if (disp == DisplayType.SCIENTIFIC)
         {
             return multiplier.ToString("0.####") + $"e+{tenpow}";
         }
+        //Converts the big number to named notation
         else if (disp == DisplayType.NAMES)
         {
+            //Find the index of our correct name
             int index = (tenpow - 6) / 3;
+            //If the index is outside of the array (currently at 66+ zeroes), just use scientific notation
             if (index >= powNames.Length)
             {
                 return multiplier.ToString("0.####") + $"e+{tenpow}";
             }
-
+            
+            //Currently this is set up to always have 4 digits followed by the name
+            //The number of non-decimal digits is determined by the difference between the tenpow of the number and the tenpow of 
+            //the name at our index + 1, e.g. 100 million has a tenpow of 8, 8 - 6 = 2, 2 + 1 = 3 (100 has 3 non-decimal digits)
             int numZeros = (tenpow - 6) % 3;
             string formatString = "0";
             for (int i = 0; i < numZeros; ++i)
             {
                 formatString += "0";
             }
+            //Any remaining digits will be decimal up to a total of 4 digits
             formatString += ".";
             for (int i = 0; i < 4 - numZeros; ++i)
             {
@@ -81,11 +98,13 @@ public class BigNumber
         return base.GetHashCode();
     }
 
+    //Allows you to change the display type of ALL big numbers (there is no local display type)
     public static void SetDisplayType(DisplayType d)
     {
         disp = d;
     }
 
+    //Gets the current display type of ALL big numbers (there is no local display type)
     public static DisplayType GetDisplayType()
     {
         return disp;
@@ -99,6 +118,7 @@ public class BigNumber
         return this;
     }
 
+    //Creates and returns a BigNumber equivalent to 0
     public static BigNumber Zero()
     {
         BigNumber n = new BigNumber();
@@ -323,6 +343,7 @@ public class BigNumber
         return n;
     }
 
+    //Creates and returns a random BigNumber between min and max
     public static BigNumber RandomRange(BigNumber min, BigNumber max)
     {
         if (min.tenpow == max.tenpow)
