@@ -24,15 +24,6 @@ public class Health : MonoBehaviour
     void Start()
     {
         currHealth = new BigNumber(StartHealth);
-        // If the user set a prefab for the healthbar, spawn it and make it loosely attached to this object
-        if (HealthbarObj)
-        {
-            GameObject hbo = Instantiate(HealthbarObj, GameObject.Find("Canvas").transform);
-            bs = hbo.GetComponentInChildren<BarScaler>();
-            t = hbo.GetComponentInChildren<TextMeshProUGUI>();
-            hbo.GetComponent<FollowNonCanvasObject>().SetFollowTransform(transform);
-            hb = hbo;
-        }
     }
 
     void Update()
@@ -65,6 +56,10 @@ public class Health : MonoBehaviour
             {
                 gameObject.SendMessage("ReachedZeroHealth", SendMessageOptions.DontRequireReceiver);
             }
+            else
+            {
+                gameObject.SendMessage("HealthReduced", SendMessageOptions.DontRequireReceiver);
+            }
         }
     }
 
@@ -73,5 +68,28 @@ public class Health : MonoBehaviour
     public GameObject GetHealthbar()
     {
         return hb;
+    }
+
+    public void SpawnHealthbar(GameObject parent)
+    {
+        // If the user set a prefab for the healthbar, spawn it and make it loosely attached to this object
+        if (HealthbarObj)
+        {
+            GameObject hbo = Instantiate(HealthbarObj, parent.transform);
+            bs = hbo.GetComponentInChildren<BarScaler>();
+            t = hbo.GetComponentInChildren<TextMeshProUGUI>();
+            hbo.GetComponent<FollowNonCanvasObject>().SetFollowTransform(transform);
+            hb = hbo;
+        }
+    }
+
+    public void SetHealth(BigNumber newHealth)
+    {
+        currHealth = newHealth;
+    }
+
+    public BigNumber GetHealth()
+    {
+        return currHealth;
     }
 }
