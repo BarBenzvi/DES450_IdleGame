@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: eebaffff
-      m_LastClickedID: -17682
-      m_ExpandedIDs: cee8ffffeeeaffff2afbffff
+      m_SelectedIDs: aa5affff
+      m_LastClickedID: -42326
+      m_ExpandedIDs: 3c5dffff6c6fffff746fffffd6aaffff3cdcffffcee8ffffeeeaffff2afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -557,9 +557,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.1004076, y: 0.06212005, z: 0.077674076}
+    m_Target: {x: -3.7585654, y: 0.31198296, z: 0.23204067}
     speed: 2
-    m_Value: {x: -1.1004076, y: 0.06212005, z: 0.077674076}
+    m_Value: {x: -3.7585654, y: 0.31198296, z: 0.23204067}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -610,9 +610,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.855831
+    m_Target: 5.456369
     speed: 2
-    m_Value: 5.855831
+    m_Value: 5.456369
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -705,13 +705,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts/Cheats
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scripts/Cheats
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\bar_b\OneDrive\Documents\GitHub\DES450_IdleGame\Unity
     Project\DES450IdleGame
@@ -719,8 +719,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 34600000
-    m_LastClickedID: 24628
+    m_SelectedIDs: 66930000
+    m_LastClickedID: 37734
     m_ExpandedIDs: 00000000825f0000985f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -749,7 +749,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000825f0000
+    m_ExpandedIDs: 00000000825f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -774,9 +774,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: eebaffff
-    m_LastClickedInstanceID: -17682
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: aa5affff
+    m_LastClickedInstanceID: -42326
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000a27b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -894,7 +894,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 226.40002
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

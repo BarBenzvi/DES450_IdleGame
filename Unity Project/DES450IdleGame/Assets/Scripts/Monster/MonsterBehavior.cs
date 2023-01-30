@@ -136,4 +136,12 @@ public class MonsterBehavior : MonoBehaviour
             colliding = false;
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.gameObject == currBoat)
+        {
+            colliding = true;
+        }
+    }
 }
