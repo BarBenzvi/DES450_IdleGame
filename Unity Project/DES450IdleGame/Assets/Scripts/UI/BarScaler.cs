@@ -13,8 +13,6 @@ public class BarScaler : MonoBehaviour
     public float targetSize = 0.0f;
     float currSize = 0.0f;
 
-
-
     RectTransform rTransform;
 
     // Start is called before the first frame update
@@ -30,6 +28,7 @@ public class BarScaler : MonoBehaviour
         {
             currSize = Mathf.Lerp(currSize, targetSize, CatchupSpeed * Time.deltaTime);
             rTransform.SetSizeWithCurrentAnchors(ScaleAxis, currSize);
+            // If we're barely over/below target size, hard set to target size
             if (Mathf.Abs(targetSize - currSize) < Mathf.Epsilon)
             {
                 currSize = targetSize;
@@ -52,7 +51,5 @@ public class BarScaler : MonoBehaviour
         }
 
         targetSize = value;
-
-        //rTransform.SetSizeWithCurrentAnchors(ScaleAxis, value);
     }
 }

@@ -10,7 +10,7 @@ public class KillBox : MonoBehaviour
         BoatBehavior bh = collision.GetComponent<BoatBehavior>();
         if (bh)
         {
-            // Fully destroy immediately so that it doesn't generate coins
+            // Fully destroy without dealing damage so that it doesn't generate coins
             bh.FullyDestroyBoat();
         }
     }

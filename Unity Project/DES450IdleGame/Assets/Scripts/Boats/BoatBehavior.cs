@@ -80,6 +80,7 @@ public class BoatBehavior : MonoBehaviour
         }
     }
 
+    // When our health has reached zero, the boat should die and give the player coins
     void ReachedZeroHealth()
     {
         GlobalGameData.Coins += BigNumber.RandomRange(MinCoins, MaxCoins);
@@ -87,6 +88,7 @@ public class BoatBehavior : MonoBehaviour
         FullyDestroyBoat();
     }
 
+    // Destroys the boat and any loosely attached objects (healthbar)
     public void FullyDestroyBoat()
     {
         Destroy(GetComponent<Health>().GetHealthbar());

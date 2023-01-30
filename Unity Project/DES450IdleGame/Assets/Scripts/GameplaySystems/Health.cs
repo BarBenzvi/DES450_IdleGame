@@ -24,6 +24,7 @@ public class Health : MonoBehaviour
     void Start()
     {
         currHealth = new BigNumber(StartHealth);
+        // If the user set a prefab for the healthbar, spawn it and make it loosely attached to this object
         if (HealthbarObj)
         {
             GameObject hbo = Instantiate(HealthbarObj, GameObject.Find("Canvas").transform);
@@ -36,6 +37,7 @@ public class Health : MonoBehaviour
 
     void Update()
     {
+        // Update bar scaler and text for health if they exist
         if (bs)
         {
             bs.SetScale((currHealth / StartHealth).GetMultiplier(), 1.0f);
@@ -66,7 +68,8 @@ public class Health : MonoBehaviour
         }
     }
 
-    // Returns the 
+    // Returns the healthbar that is loosely attached to this object
+    // If there is no healthbar loosely attached to this object, this will return null
     public GameObject GetHealthbar()
     {
         return hb;

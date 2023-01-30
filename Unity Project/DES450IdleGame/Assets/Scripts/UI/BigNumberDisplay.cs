@@ -6,19 +6,22 @@ using TMPro;
 public class BigNumberDisplay : MonoBehaviour
 {
     public BigNumber ToDisplay = new BigNumber();
+    // Text that will display before the number
     public string PreText = "";
+
+    // Text that will display after the number
     public string PostText = "";
+
+    // If this is true, this component will display GlobalGameData.Coins
     public bool ShowGlobalCoins = false;
 
     TextMeshProUGUI text = null;
 
-    // Start is called before the first frame update
     void Start()
     {
         text = GetComponent<TextMeshProUGUI>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (text)
