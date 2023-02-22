@@ -13,11 +13,24 @@ public class MainUIManager : MonoBehaviour
     public GameObject FloraPanel;
     public GameObject OpenButton;
     public GameObject CloseButton;
+    public GameObject SeagrassPanel;
+    public GameObject CoralPanel;
+    public GameObject KelpPanel;
+    public GameObject CoralLockPanel;
+    public GameObject KelpLockPanel;
+
+    public bool CoralLock = true;
+    public bool KelpLock = true;
+
+    private AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (FindObjectOfType<AudioManager>() != null)
+        {
+            audioManager = FindObjectOfType<AudioManager>();
+        }
     }
 
     // Update is called once per frame
@@ -32,6 +45,8 @@ public class MainUIManager : MonoBehaviour
         CloseButton.SetActive(true);
 
         OpenButton.SetActive(false);
+
+        audioManager.UIClicked();
     }
 
     public void OpenMonsterPanel()
@@ -41,6 +56,8 @@ public class MainUIManager : MonoBehaviour
         CursorPanel.SetActive(false);
         BoatsPanel.SetActive(false);
         FloraPanel.SetActive(false);
+
+        audioManager.UIClicked();
     }
 
     public void OpenSkillTree()
@@ -49,6 +66,8 @@ public class MainUIManager : MonoBehaviour
 
         LeftPanel.SetActive(false);
         CloseButton.SetActive(false);
+
+        audioManager.UIClicked();
     }
 
     public void OpenCursorPanel()
@@ -58,6 +77,8 @@ public class MainUIManager : MonoBehaviour
         MonsterPanel.SetActive(false);
         BoatsPanel.SetActive(false);
         FloraPanel.SetActive(false);
+
+        audioManager.UIClicked();
     }
 
     public void OpenBoatsPanel()
@@ -67,6 +88,8 @@ public class MainUIManager : MonoBehaviour
         MonsterPanel.SetActive(false);
         CursorPanel.SetActive(true);
         FloraPanel.SetActive(false);
+
+        audioManager.UIClicked();
     }
 
     public void OpenFloraPanel()
@@ -76,6 +99,8 @@ public class MainUIManager : MonoBehaviour
         MonsterPanel.SetActive(false);
         CursorPanel.SetActive(false);
         BoatsPanel.SetActive(false);
+
+        audioManager.UIClicked();
     }
 
     public void CloseMainUI()
@@ -84,6 +109,8 @@ public class MainUIManager : MonoBehaviour
 
         LeftPanel.SetActive(false);
         CloseButton.SetActive(false);
+
+        audioManager.UIClicked();
     }
 
     public void CloseSkillTree()
@@ -92,5 +119,55 @@ public class MainUIManager : MonoBehaviour
         CloseButton.SetActive(true);
 
         SkillTreePanel.SetActive(false);
+
+        audioManager.UIClicked();
+    }
+
+    public void OpenSegrassTab()
+    {
+        SeagrassPanel.SetActive(true);
+
+        CoralPanel.SetActive(false);
+        KelpPanel.SetActive(false);
+        KelpLockPanel.SetActive(false);
+        CoralLockPanel.SetActive(false);
+
+        audioManager.UIClicked();
+    }
+
+    public void OpenCoralTab()
+    {
+        if (CoralLock == true)
+        {
+            CoralLockPanel.SetActive(true);
+        }
+        else
+        {
+            CoralPanel.SetActive(true);
+        }
+
+        SeagrassPanel.SetActive(false);
+        KelpPanel.SetActive(false);
+        KelpLockPanel.SetActive(false);
+
+        audioManager.UIClicked();
+    }
+
+    public void OpenKelpTab()
+    {
+        if (KelpLock == true)
+        {
+            KelpLockPanel.SetActive(true);
+        }
+        else
+        {
+            KelpPanel.SetActive(true);
+        }
+
+        SeagrassPanel.SetActive(false);
+        CoralPanel.SetActive(false);
+        CoralLockPanel.SetActive(false);
+
+        audioManager.UIClicked();
     }
 }

@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Sources")]
     public AudioSource BoatDie;
     public AudioSource BoatTakeDmg;
+    public AudioSource UI_Click;
 
     // Start is called before the first frame update
     void Start()
@@ -28,5 +29,10 @@ public class AudioManager : MonoBehaviour
     public void BoatTakeDamage()
     {
         BoatTakeDmg.Play();
+    }
+
+    public void UIClicked()
+    {
+        UI_Click.Play();
     }
 }
