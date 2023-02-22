@@ -19,7 +19,7 @@ public class UpgradeButton : MonoBehaviour
 
     private void Update()
     {
-        CostText.text = currCost.ToString();
+        CostText.text = currCost.ToString() + " Coins";
     }
 
     virtual protected void UpgradeEffects()
