@@ -16,9 +16,11 @@ public class MainUIManager : MonoBehaviour
     public GameObject SeagrassPanel;
     public GameObject CoralPanel;
     public GameObject KelpPanel;
+    public GameObject SeagrassLockPanel;
     public GameObject CoralLockPanel;
     public GameObject KelpLockPanel;
 
+    public bool SeagrassLock = true;
     public bool CoralLock = true;
     public bool KelpLock = true;
 
@@ -86,7 +88,7 @@ public class MainUIManager : MonoBehaviour
         BoatsPanel.SetActive(true);
 
         MonsterPanel.SetActive(false);
-        CursorPanel.SetActive(true);
+        CursorPanel.SetActive(false);
         FloraPanel.SetActive(false);
 
         audioManager.UIClicked();
@@ -125,11 +127,18 @@ public class MainUIManager : MonoBehaviour
 
     public void OpenSegrassTab()
     {
-        SeagrassPanel.SetActive(true);
+        if (SeagrassLock == true)
+        {
+            SeagrassLockPanel.SetActive(true);
+        }
+        else
+        {
+            SeagrassPanel.SetActive(true);
+        }
 
-        CoralPanel.SetActive(false);
         KelpPanel.SetActive(false);
         KelpLockPanel.SetActive(false);
+        CoralPanel.SetActive(false);
         CoralLockPanel.SetActive(false);
 
         audioManager.UIClicked();
@@ -147,6 +156,7 @@ public class MainUIManager : MonoBehaviour
         }
 
         SeagrassPanel.SetActive(false);
+        SeagrassLockPanel.SetActive(false);
         KelpPanel.SetActive(false);
         KelpLockPanel.SetActive(false);
 
@@ -165,9 +175,31 @@ public class MainUIManager : MonoBehaviour
         }
 
         SeagrassPanel.SetActive(false);
+        SeagrassLockPanel.SetActive(false);
         CoralPanel.SetActive(false);
         CoralLockPanel.SetActive(false);
 
         audioManager.UIClicked();
+    }
+
+    public void UnlockSeagrass()
+    {
+        SeagrassLock = false;
+        SeagrassLockPanel.SetActive(false);
+        SeagrassPanel.SetActive(true);
+    }
+
+    public void UnlockCoral()
+    {
+        CoralLock = false;
+        CoralLockPanel.SetActive(false);
+        CoralPanel.SetActive(true);
+    }
+
+    public void UnlockKelp()
+    {
+        KelpLock = false;
+        KelpLockPanel.SetActive(false);
+        KelpPanel.SetActive(true);
     }
 }
