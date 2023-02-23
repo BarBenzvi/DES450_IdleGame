@@ -19,12 +19,20 @@ public class MainUIManager : MonoBehaviour
     public GameObject SeagrassLockPanel;
     public GameObject CoralLockPanel;
     public GameObject KelpLockPanel;
+    public GameObject OffScreenObject;
+
+    public float InAndOutSpeed = 0.03f;
+
+    public bool MainUI_Active = true;
 
     public bool SeagrassLock = true;
     public bool CoralLock = true;
     public bool KelpLock = true;
 
     private AudioManager audioManager;
+
+    private float timer = 0f;
+    private float origX = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -33,20 +41,50 @@ public class MainUIManager : MonoBehaviour
         {
             audioManager = FindObjectOfType<AudioManager>();
         }
+
+        //original X position of main UI
+        origX = LeftPanel.GetComponent<RectTransform>().position.x;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //Debug.Log(LeftPanel.GetComponent<RectTransform>().position.x);
+
+        //Lerp To Default Location
+        if (MainUI_Active == true)
+        {
+            timer += Time.deltaTime;
+            float posX = Mathf.Lerp(OffScreenObject.transform.position.x, origX, timer * InAndOutSpeed);
+
+            LeftPanel.GetComponent<RectTransform>().position = new Vector3(posX, LeftPanel.GetComponent<RectTransform>().position.y, LeftPanel.GetComponent<RectTransform>().position.z);
+        }
+
+        //Lerp Off Screen
+        if (MainUI_Active == false)
+        {
+            timer += Time.deltaTime;
+            float posX = Mathf.Lerp(origX, OffScreenObject.transform.position.x, timer * InAndOutSpeed);
+
+            LeftPanel.GetComponent<RectTransform>().position = new Vector3(posX, LeftPanel.GetComponent<RectTransform>().position.y, LeftPanel.GetComponent<RectTransform>().position.z);
+
+            if (LeftPanel.GetComponent<RectTransform>().position.x >= OffScreenObject.transform.position.x - 0.05f && LeftPanel.GetComponent<RectTransform>().position.x <= origX + 0.05f)
+            {
+                OpenButton.SetActive(true);
+            }
+        }
     }
 
     public void OpenMainUI()
     {
-        LeftPanel.SetActive(true);
-        CloseButton.SetActive(true);
+        //LeftPanel.SetActive(true);
+        //CloseButton.SetActive(true);
 
         OpenButton.SetActive(false);
+
+        timer = 0f;
+
+        MainUI_Active = true;
 
         audioManager.UIClicked();
     }
@@ -107,10 +145,14 @@ public class MainUIManager : MonoBehaviour
 
     public void CloseMainUI()
     {
-        OpenButton.SetActive(true);
+        //OpenButton.SetActive(true);
 
-        LeftPanel.SetActive(false);
-        CloseButton.SetActive(false);
+        //LeftPanel.SetActive(false);
+        //CloseButton.SetActive(false);
+
+        timer = 0f;
+
+        MainUI_Active = false;
 
         audioManager.UIClicked();
     }
