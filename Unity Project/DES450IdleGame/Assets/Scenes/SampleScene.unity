@@ -4939,12 +4939,16 @@ MonoBehaviour:
     multiplier: 2.5
     tenpow: 2
   CostMultiplier: 1.5
-  LevelPreText: 
+  LevelPreText: 'Boat Level: '
   CostText: {fileID: 510868017}
-  LevelText: {fileID: 0}
+  LevelText: {fileID: 554535143}
   IncomeMultiplier: 1.2
   HealthMultiplier: 1.4
   SpawnRateIncrease: 0
+  IncomeText: {fileID: 814827245}
+  HealthText: {fileID: 1603670974}
+  SpawnrateText: {fileID: 0}
+  BoatPrefab: {fileID: 4770620366287115769, guid: 6b5fed7f581c9684e9b7c93d59ee7e1f, type: 3}
 --- !u!1 &456846048
 GameObject:
   m_ObjectHideFlags: 0
@@ -7374,7 +7378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &599112902
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14840,6 +14844,10 @@ MonoBehaviour:
   IncomeMultiplier: 1.2
   HealthMultiplier: 1.4
   SpawnRateIncrease: 0
+  IncomeText: {fileID: 0}
+  HealthText: {fileID: 0}
+  SpawnrateText: {fileID: 0}
+  BoatPrefab: {fileID: 0}
 --- !u!114 &1327833729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19734,6 +19742,10 @@ MonoBehaviour:
   IncomeMultiplier: 1
   HealthMultiplier: 1
   SpawnRateIncrease: 0.1
+  IncomeText: {fileID: 0}
+  HealthText: {fileID: 0}
+  SpawnrateText: {fileID: 0}
+  BoatPrefab: {fileID: 0}
 --- !u!114 &1859427954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21971,12 +21983,16 @@ MonoBehaviour:
     multiplier: 1
     tenpow: 3
   CostMultiplier: 2.1
-  LevelPreText: 
+  LevelPreText: 'Spawn Rate Level: '
   CostText: {fileID: 608710667}
-  LevelText: {fileID: 0}
+  LevelText: {fileID: 1219386881}
   IncomeMultiplier: 1
   HealthMultiplier: 1
   SpawnRateIncrease: 0.1
+  IncomeText: {fileID: 0}
+  HealthText: {fileID: 0}
+  SpawnrateText: {fileID: 1511964803}
+  BoatPrefab: {fileID: 0}
 --- !u!1 &2123366397
 GameObject:
   m_ObjectHideFlags: 0
