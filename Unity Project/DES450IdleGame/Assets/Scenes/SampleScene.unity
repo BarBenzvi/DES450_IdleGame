@@ -1526,11 +1526,13 @@ MonoBehaviour:
     multiplier: 5
     tenpow: 2
   CostMultiplier: 1.7
-  LevelPreText: 
+  LevelPreText: 'Level: '
   CostText: {fileID: 1478908948}
-  LevelText: {fileID: 0}
+  LevelText: {fileID: 1177115467}
   DamageMultiplier: 1.2
   AttackSpeedMultiplier: 0.9
+  DamageText: {fileID: 1312254342}
+  AttackSpeedText: {fileID: 428542735}
 --- !u!114 &121367494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1858,6 +1860,8 @@ MonoBehaviour:
   LevelText: {fileID: 0}
   DamageMultiplier: 1.2
   AttackSpeedMultiplier: 0.9
+  DamageText: {fileID: 0}
+  AttackSpeedText: {fileID: 0}
 --- !u!114 &190291356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5678,6 +5682,8 @@ MonoBehaviour:
   LevelText: {fileID: 0}
   DamageMultiplier: 1.2
   AttackSpeedMultiplier: 0.9
+  DamageText: {fileID: 0}
+  AttackSpeedText: {fileID: 0}
 --- !u!114 &513361711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7015,6 +7021,8 @@ MonoBehaviour:
   LevelText: {fileID: 0}
   DamageMultiplier: 1.2
   AttackSpeedMultiplier: 0.9
+  DamageText: {fileID: 0}
+  AttackSpeedText: {fileID: 0}
 --- !u!114 &591205026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8240,6 +8248,8 @@ MonoBehaviour:
   LevelText: {fileID: 0}
   DamageMultiplier: 1.2
   AttackSpeedMultiplier: 0.9
+  DamageText: {fileID: 0}
+  AttackSpeedText: {fileID: 0}
 --- !u!114 &649273902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14215,6 +14225,8 @@ MonoBehaviour:
   LevelText: {fileID: 0}
   DamageMultiplier: 1.2
   AttackSpeedMultiplier: 0.9
+  DamageText: {fileID: 0}
+  AttackSpeedText: {fileID: 0}
 --- !u!114 &1284493074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14669,6 +14681,8 @@ MonoBehaviour:
   LevelText: {fileID: 0}
   DamageMultiplier: 1.2
   AttackSpeedMultiplier: 0.9
+  DamageText: {fileID: 0}
+  AttackSpeedText: {fileID: 0}
 --- !u!114 &1314362367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17167,6 +17181,8 @@ MonoBehaviour:
   LevelText: {fileID: 0}
   DamageMultiplier: 1.2
   AttackSpeedMultiplier: 0.9
+  DamageText: {fileID: 0}
+  AttackSpeedText: {fileID: 0}
 --- !u!114 &1561951100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18128,6 +18144,8 @@ MonoBehaviour:
   LevelText: {fileID: 0}
   DamageMultiplier: 1.2
   AttackSpeedMultiplier: 0.9
+  DamageText: {fileID: 0}
+  AttackSpeedText: {fileID: 0}
 --- !u!114 &1620194628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19968,6 +19986,8 @@ MonoBehaviour:
   LevelText: {fileID: 0}
   DamageMultiplier: 1.2
   AttackSpeedMultiplier: 0.9
+  DamageText: {fileID: 0}
+  AttackSpeedText: {fileID: 0}
 --- !u!114 &1869548806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20578,6 +20598,8 @@ MonoBehaviour:
   LevelText: {fileID: 0}
   DamageMultiplier: 1.2
   AttackSpeedMultiplier: 0.9
+  DamageText: {fileID: 0}
+  AttackSpeedText: {fileID: 0}
 --- !u!114 &1964646779
 MonoBehaviour:
   m_ObjectHideFlags: 0
