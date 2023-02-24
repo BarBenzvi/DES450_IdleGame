@@ -22,13 +22,13 @@ public class FloraUnlocker : MonoBehaviour
             switch (ToUnlock)
             {
                 case FloraTypes.SEAGRASS:
-                    UIManager.SeagrassLock = false;
+                    UIManager.UnlockSeagrass();
                     break;
                 case FloraTypes.CORAL:
-                    UIManager.CoralLock = false;
+                    UIManager.UnlockCoral();
                     break;
                 case FloraTypes.KELP:
-                    UIManager.KelpLock = false;
+                    UIManager.UnlockKelp();
                     break;
             }
         }
