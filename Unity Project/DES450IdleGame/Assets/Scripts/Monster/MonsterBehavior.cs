@@ -15,6 +15,8 @@ public class MonsterBehavior : MonoBehaviour
     public BigNumber BaseDamage = new BigNumber(5, 0);
     public float AttackCooldown = 0.25f;
 
+    public int Level = 1;
+
     Rigidbody2D rb2d = null;
     GameObject currBoat = null;
     float currSpeedMultiplier = 1.0f;

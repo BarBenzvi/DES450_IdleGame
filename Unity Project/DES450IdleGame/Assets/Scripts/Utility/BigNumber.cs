@@ -130,6 +130,11 @@ public class BigNumber
     //Casting
     public static explicit operator BigNumber(int i)
     {
+        if(i == 0)
+        {
+            return Zero();
+        }
+
         BigNumber n = new BigNumber();
         n.tenpow = (int)Mathf.Log10(i);
         n.multiplier = (float)i / Mathf.Pow(10, n.tenpow);
@@ -139,6 +144,11 @@ public class BigNumber
 
     public static explicit operator BigNumber(float f)
     {
+        if (f == 0)
+        {
+            return Zero();
+        }
+
         BigNumber n = new BigNumber();
         n.tenpow = (int)Mathf.Log10(f);
         n.multiplier = f / Mathf.Pow(10, n.tenpow);
@@ -234,11 +244,11 @@ public class BigNumber
 
     public static BigNumber operator +(BigNumber lhs, BigNumber rhs)
     {
-        if (lhs.tenpow - rhs.tenpow > 8)
+        if (lhs.tenpow - rhs.tenpow > 8 || rhs == Zero())
         {
             return lhs;
         }
-        else if (lhs.tenpow - rhs.tenpow < -8)
+        else if (lhs.tenpow - rhs.tenpow < -8 || lhs == Zero())
         {
             return rhs;
         }
@@ -297,6 +307,11 @@ public class BigNumber
 
     public static BigNumber operator *(BigNumber lhs, BigNumber rhs)
     {
+        if(lhs == Zero() || rhs == Zero())
+        {
+            return Zero();
+        }
+
         BigNumber n = new BigNumber(lhs);
 
         n.tenpow += rhs.tenpow;
@@ -320,6 +335,11 @@ public class BigNumber
 
     public static BigNumber operator /(BigNumber lhs, BigNumber rhs)
     {
+        if (lhs == Zero() || rhs == Zero())
+        {
+            return Zero();
+        }
+
         if (lhs.tenpow - rhs.tenpow < -7)
         {
             return Zero();

@@ -24,6 +24,7 @@ public class MonsterUpgrader : UpgradeButton
     {
         m.BaseDamage *= DamageMultiplier;
         m.AttackCooldown *= AttackSpeedMultiplier;
+        m.Level += 1;
     }
 
     protected override void UpdateText()

@@ -15,6 +15,9 @@ public class BigNumberDisplay : MonoBehaviour
     // If this is true, this component will display GlobalGameData.Coins
     public bool ShowGlobalCoins = false;
 
+    // If this is true, this component will display GlobalGameData.Platinum
+    public bool ShowGlobalPlatinum = false;
+
     TextMeshProUGUI text = null;
 
     void Start()
@@ -29,6 +32,10 @@ public class BigNumberDisplay : MonoBehaviour
             if (ShowGlobalCoins)
             {
                 text.text = PreText + GlobalGameData.Coins.ToString() + PostText;
+            }
+            else if(ShowGlobalPlatinum)
+            {
+                text.text = PreText + GlobalGameData.Platinum.ToString() + PostText;
             }
             else
             {
