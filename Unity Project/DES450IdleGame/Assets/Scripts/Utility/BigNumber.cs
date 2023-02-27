@@ -32,7 +32,7 @@ public class BigNumber
     }
 
     //Static variable used to control display type (can be either scientific notation, or named notation)
-    private static DisplayType disp = DisplayType.SCIENTIFIC;
+    private static DisplayType disp = DisplayType.NAMES;
 
     //String array of names for each 10^3x power starting at million
     private readonly static string[] powNames =
