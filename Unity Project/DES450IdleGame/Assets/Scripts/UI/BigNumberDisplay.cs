@@ -18,6 +18,9 @@ public class BigNumberDisplay : MonoBehaviour
     // If this is true, this component will display GlobalGameData.Platinum
     public bool ShowGlobalPlatinum = false;
 
+    // If this is true, this component will display GlobalGameData.SkillTreePoints
+    public bool ShowGlobalSkillPoints = false;
+
     TextMeshProUGUI text = null;
 
     void Start()
@@ -36,6 +39,10 @@ public class BigNumberDisplay : MonoBehaviour
             else if(ShowGlobalPlatinum)
             {
                 text.text = PreText + GlobalGameData.Platinum.ToString() + PostText;
+            }
+            else if(ShowGlobalSkillPoints)
+            {
+                text.text = PreText + GlobalGameData.SkillTreePoints.ToString() + PostText;
             }
             else
             {

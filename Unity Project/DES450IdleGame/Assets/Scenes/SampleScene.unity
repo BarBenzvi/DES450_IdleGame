@@ -561,10 +561,10 @@ RectTransform:
   m_Father: {fileID: 190291353}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 284.96997, y: -22.5}
+  m_SizeDelta: {x: 569.93994, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &63498014
 MonoBehaviour:
@@ -1531,6 +1531,8 @@ MonoBehaviour:
   LevelText: {fileID: 1177115467}
   DamageMultiplier: 1.2
   AttackSpeedMultiplier: 0.9
+  PlatinumLevelInterval: 1
+  SkillPointLevelInterval: 10
   DamageText: {fileID: 1312254342}
   AttackSpeedText: {fileID: 428542735}
 --- !u!114 &121367494
@@ -1866,8 +1868,8 @@ GameObject:
   - component: {fileID: 190291358}
   - component: {fileID: 190291357}
   - component: {fileID: 190291356}
-  - component: {fileID: 190291355}
   - component: {fileID: 190291354}
+  - component: {fileID: 190291359}
   m_Layer: 5
   m_Name: B_LevelUpgrade
   m_TagString: Untagged
@@ -1892,10 +1894,10 @@ RectTransform:
   m_Father: {fileID: 456846049}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 90}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 584.93994, y: -428.98904}
+  m_SizeDelta: {x: 569.93994, y: 90}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &190291354
 MonoBehaviour:
@@ -1923,29 +1925,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &190291355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 190291352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adac44fc8e7ed514298733a40f68d902, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BaseCost:
-    multiplier: 5
-    tenpow: 2
-  CostMultiplier: 1.7
-  LevelPreText: 
-  CostText: {fileID: 1143530422}
-  LevelText: {fileID: 0}
-  DamageMultiplier: 1.2
-  AttackSpeedMultiplier: 0.9
-  DamageText: {fileID: 0}
-  AttackSpeedText: {fileID: 0}
 --- !u!114 &190291356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1990,7 +1969,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 190291355}
+      - m_Target: {fileID: 190291359}
         m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
         m_MethodName: PurchaseUpgrade
         m_Mode: 1
@@ -2040,6 +2019,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190291352}
   m_CullTransparentMesh: 1
+--- !u!114 &190291359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190291352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b582bc406138ad48800610c665b73f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BaseCost:
+    multiplier: 9
+    tenpow: 1
+  CostMultiplier: 1.5
+  LevelPreText: 'Level: '
+  CostText: {fileID: 1143530422}
+  LevelText: {fileID: 1408990594}
+  NumIncrease: 0
+  RateIncrease:
+    multiplier: 0.5
+    tenpow: 0
+  Flora: {fileID: 456846053}
 --- !u!1 &217948400
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,10 +2079,10 @@ RectTransform:
   m_Father: {fileID: 290984781}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 299.96997, y: -93.87018}
+  m_SizeDelta: {x: 199.97998, y: 93.87018}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &217948402
 MonoBehaviour:
@@ -3041,6 +3044,7 @@ MonoBehaviour:
   PostText: 
   ShowGlobalCoins: 0
   ShowGlobalPlatinum: 1
+  ShowGlobalSkillPoints: 0
 --- !u!1 &319070043
 GameObject:
   m_ObjectHideFlags: 0
@@ -3328,7 +3332,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &336241922
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3844,7 +3848,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: COST
+  m_text: 10 Platinum
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fe7b0ac22d5ae7041a1456fc3f0fa1e3, type: 2}
   m_sharedMaterial: {fileID: 8512056667657933654, guid: fe7b0ac22d5ae7041a1456fc3f0fa1e3, type: 2}
@@ -4044,6 +4048,7 @@ GameObject:
   - component: {fileID: 389874916}
   - component: {fileID: 389874915}
   - component: {fileID: 389874914}
+  - component: {fileID: 389874917}
   m_Layer: 5
   m_Name: CoralPanel
   m_TagString: Untagged
@@ -4141,6 +4146,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389874912}
   m_CullTransparentMesh: 1
+--- !u!114 &389874917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389874912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b96c7c987327f642ac95f6d8bae6130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumFlora: 0
+  EarnRatePerFlora:
+    multiplier: 1
+    tenpow: 1
+  TimeBetweenIncome: 0.5
+  NumText: {fileID: 784960348}
+  IncomeText: {fileID: 514203036}
 --- !u!1 &392936731
 GameObject:
   m_ObjectHideFlags: 0
@@ -4655,10 +4679,10 @@ RectTransform:
   m_Father: {fileID: 456846049}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 299.96997, y: -26.271732}
+  m_SizeDelta: {x: 569.93994, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &411864840
 MonoBehaviour:
@@ -5176,7 +5200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &456846049
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5872,8 +5896,8 @@ GameObject:
   - component: {fileID: 513361713}
   - component: {fileID: 513361712}
   - component: {fileID: 513361711}
-  - component: {fileID: 513361710}
   - component: {fileID: 513361709}
+  - component: {fileID: 513361714}
   m_Layer: 5
   m_Name: B_Purchase
   m_TagString: Untagged
@@ -5929,29 +5953,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &513361710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513361707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adac44fc8e7ed514298733a40f68d902, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BaseCost:
-    multiplier: 5
-    tenpow: 2
-  CostMultiplier: 1.7
-  LevelPreText: 
-  CostText: {fileID: 63542669}
-  LevelText: {fileID: 0}
-  DamageMultiplier: 1.2
-  AttackSpeedMultiplier: 0.9
-  DamageText: {fileID: 0}
-  AttackSpeedText: {fileID: 0}
 --- !u!114 &513361711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5996,7 +5997,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 513361710}
+      - m_Target: {fileID: 513361714}
         m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
         m_MethodName: PurchaseUpgrade
         m_Mode: 1
@@ -6046,6 +6047,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 513361707}
   m_CullTransparentMesh: 1
+--- !u!114 &513361714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513361707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b582bc406138ad48800610c665b73f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BaseCost:
+    multiplier: 2
+    tenpow: 6
+  CostMultiplier: 2.5
+  LevelPreText: 
+  CostText: {fileID: 63542669}
+  LevelText: {fileID: 0}
+  NumIncrease: 1
+  RateIncrease:
+    multiplier: 0
+    tenpow: 0
+  Flora: {fileID: 2034502541}
 --- !u!1 &514203034
 GameObject:
   m_ObjectHideFlags: 0
@@ -6699,6 +6724,7 @@ MonoBehaviour:
   PostText: 
   ShowGlobalCoins: 1
   ShowGlobalPlatinum: 0
+  ShowGlobalSkillPoints: 0
 --- !u!114 &539313435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7212,8 +7238,8 @@ GameObject:
   - component: {fileID: 591205028}
   - component: {fileID: 591205027}
   - component: {fileID: 591205026}
-  - component: {fileID: 591205025}
   - component: {fileID: 591205024}
+  - component: {fileID: 591205029}
   m_Layer: 5
   m_Name: B_Purchase
   m_TagString: Untagged
@@ -7238,10 +7264,10 @@ RectTransform:
   m_Father: {fileID: 456846049}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0.5, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 90}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 584.93994, y: -316.4456}
+  m_SizeDelta: {x: 569.93994, y: 90}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &591205024
 MonoBehaviour:
@@ -7269,29 +7295,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &591205025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591205022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adac44fc8e7ed514298733a40f68d902, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BaseCost:
-    multiplier: 5
-    tenpow: 2
-  CostMultiplier: 1.7
-  LevelPreText: 
-  CostText: {fileID: 876896043}
-  LevelText: {fileID: 0}
-  DamageMultiplier: 1.2
-  AttackSpeedMultiplier: 0.9
-  DamageText: {fileID: 0}
-  AttackSpeedText: {fileID: 0}
 --- !u!114 &591205026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7336,7 +7339,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 591205025}
+      - m_Target: {fileID: 591205029}
         m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
         m_MethodName: PurchaseUpgrade
         m_Mode: 1
@@ -7386,6 +7389,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591205022}
   m_CullTransparentMesh: 1
+--- !u!114 &591205029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591205022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b582bc406138ad48800610c665b73f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BaseCost:
+    multiplier: 1
+    tenpow: 2
+  CostMultiplier: 2.5
+  LevelPreText: 
+  CostText: {fileID: 876896043}
+  LevelText: {fileID: 0}
+  NumIncrease: 1
+  RateIncrease:
+    multiplier: 0
+    tenpow: 0
+  Flora: {fileID: 456846053}
 --- !u!1 &596206218
 GameObject:
   m_ObjectHideFlags: 0
@@ -7539,7 +7566,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &596680312
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11250,10 +11277,10 @@ RectTransform:
   m_Father: {fileID: 591205023}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 284.96997, y: -67.5}
+  m_SizeDelta: {x: 569.93994, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &876896043
 MonoBehaviour:
@@ -12473,10 +12500,10 @@ RectTransform:
   m_Father: {fileID: 456846049}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 15, y: -123.8152}
+  m_SizeDelta: {x: 569.93994, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &978658225
 MonoBehaviour:
@@ -13114,6 +13141,7 @@ MonoBehaviour:
   PostText: 
   ShowGlobalCoins: 1
   ShowGlobalPlatinum: 0
+  ShowGlobalSkillPoints: 0
 --- !u!114 &1057775560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13691,10 +13719,10 @@ RectTransform:
   m_Father: {fileID: 190291353}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 284.96997, y: -67.5}
+  m_SizeDelta: {x: 569.93994, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1143530422
 MonoBehaviour:
@@ -14712,6 +14740,8 @@ MonoBehaviour:
   LevelText: {fileID: 0}
   DamageMultiplier: 1.2
   AttackSpeedMultiplier: 0.9
+  PlatinumLevelInterval: 1
+  SkillPointLevelInterval: 10
   DamageText: {fileID: 0}
   AttackSpeedText: {fileID: 0}
 --- !u!114 &1284493074
@@ -15090,8 +15120,8 @@ GameObject:
   - component: {fileID: 1314362369}
   - component: {fileID: 1314362368}
   - component: {fileID: 1314362367}
-  - component: {fileID: 1314362366}
   - component: {fileID: 1314362365}
+  - component: {fileID: 1314362370}
   m_Layer: 5
   m_Name: B_LevelUpgrade
   m_TagString: Untagged
@@ -15147,29 +15177,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1314362366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1314362363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adac44fc8e7ed514298733a40f68d902, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BaseCost:
-    multiplier: 5
-    tenpow: 2
-  CostMultiplier: 1.7
-  LevelPreText: 
-  CostText: {fileID: 113393204}
-  LevelText: {fileID: 0}
-  DamageMultiplier: 1.2
-  AttackSpeedMultiplier: 0.9
-  DamageText: {fileID: 0}
-  AttackSpeedText: {fileID: 0}
 --- !u!114 &1314362367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15214,7 +15221,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1314362366}
+      - m_Target: {fileID: 1314362370}
         m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
         m_MethodName: PurchaseUpgrade
         m_Mode: 1
@@ -15264,6 +15271,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314362363}
   m_CullTransparentMesh: 1
+--- !u!114 &1314362370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314362363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b582bc406138ad48800610c665b73f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BaseCost:
+    multiplier: 1.9
+    tenpow: 6
+  CostMultiplier: 1.5
+  LevelPreText: 'Level: '
+  CostText: {fileID: 113393204}
+  LevelText: {fileID: 596206220}
+  NumIncrease: 0
+  RateIncrease:
+    multiplier: 1
+    tenpow: 2
+  Flora: {fileID: 2034502541}
 --- !u!1 &1327833726
 GameObject:
   m_ObjectHideFlags: 0
@@ -15955,10 +15986,10 @@ RectTransform:
   m_Father: {fileID: 456846049}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 299.96997, y: -196.35866}
+  m_SizeDelta: {x: 569.93994, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1408990594
 MonoBehaviour:
@@ -16623,10 +16654,10 @@ RectTransform:
   m_Father: {fileID: 591205023}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 284.96997, y: -22.5}
+  m_SizeDelta: {x: 569.93994, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1454735778
 MonoBehaviour:
@@ -17441,10 +17472,10 @@ RectTransform:
   m_Father: {fileID: 456846049}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 299.96997, y: -268.90213}
+  m_SizeDelta: {x: 569.93994, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1549277215
 MonoBehaviour:
@@ -17594,8 +17625,8 @@ GameObject:
   - component: {fileID: 1561951102}
   - component: {fileID: 1561951101}
   - component: {fileID: 1561951100}
-  - component: {fileID: 1561951099}
   - component: {fileID: 1561951098}
+  - component: {fileID: 1561951103}
   m_Layer: 5
   m_Name: B_Unlock
   m_TagString: Untagged
@@ -17651,29 +17682,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1561951099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1561951096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adac44fc8e7ed514298733a40f68d902, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BaseCost:
-    multiplier: 5
-    tenpow: 2
-  CostMultiplier: 1.7
-  LevelPreText: 
-  CostText: {fileID: 371135122}
-  LevelText: {fileID: 0}
-  DamageMultiplier: 1.2
-  AttackSpeedMultiplier: 0.9
-  DamageText: {fileID: 0}
-  AttackSpeedText: {fileID: 0}
 --- !u!114 &1561951100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17718,9 +17726,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1561951099}
-        m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
-        m_MethodName: PurchaseUpgrade
+      - m_Target: {fileID: 1561951103}
+        m_TargetAssemblyTypeName: FloraUnlocker, Assembly-CSharp
+        m_MethodName: TryPurchase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17768,6 +17776,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561951096}
   m_CullTransparentMesh: 1
+--- !u!114 &1561951103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561951096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fff05f95bd8a6a4597761f431b3601e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlatinumCost:
+    multiplier: 1
+    tenpow: 1
+  MinimumMonsterLevel: 20
+  UIManager: {fileID: 814555428}
+  ToUnlock: 2
 --- !u!1 &1577319781
 GameObject:
   m_ObjectHideFlags: 0
@@ -18448,6 +18474,7 @@ GameObject:
   - component: {fileID: 1609862661}
   - component: {fileID: 1609862663}
   - component: {fileID: 1609862662}
+  - component: {fileID: 1609862664}
   m_Layer: 5
   m_Name: CurrentSkillPointsText
   m_TagString: UIZone
@@ -18572,6 +18599,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609862660}
   m_CullTransparentMesh: 1
+--- !u!114 &1609862664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609862660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87fd5e88c532e194a85b05c9ba4057c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToDisplay:
+    multiplier: 1
+    tenpow: 0
+  PreText: 'Skill Tree Points: '
+  PostText: 
+  ShowGlobalCoins: 0
+  ShowGlobalPlatinum: 0
+  ShowGlobalSkillPoints: 1
 --- !u!1 &1620194624
 GameObject:
   m_ObjectHideFlags: 0
@@ -18584,8 +18631,8 @@ GameObject:
   - component: {fileID: 1620194630}
   - component: {fileID: 1620194629}
   - component: {fileID: 1620194628}
-  - component: {fileID: 1620194627}
   - component: {fileID: 1620194626}
+  - component: {fileID: 1620194631}
   m_Layer: 5
   m_Name: B_LevelUpgrade
   m_TagString: Untagged
@@ -18641,29 +18688,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1620194627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1620194624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adac44fc8e7ed514298733a40f68d902, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BaseCost:
-    multiplier: 5
-    tenpow: 2
-  CostMultiplier: 1.7
-  LevelPreText: 
-  CostText: {fileID: 288471834}
-  LevelText: {fileID: 0}
-  DamageMultiplier: 1.2
-  AttackSpeedMultiplier: 0.9
-  DamageText: {fileID: 0}
-  AttackSpeedText: {fileID: 0}
 --- !u!114 &1620194628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18708,7 +18732,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1620194627}
+      - m_Target: {fileID: 1620194631}
         m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
         m_MethodName: PurchaseUpgrade
         m_Mode: 1
@@ -18758,6 +18782,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620194624}
   m_CullTransparentMesh: 1
+--- !u!114 &1620194631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620194624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b582bc406138ad48800610c665b73f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BaseCost:
+    multiplier: 9
+    tenpow: 3
+  CostMultiplier: 1.5
+  LevelPreText: 'Level: '
+  CostText: {fileID: 288471834}
+  LevelText: {fileID: 1015282495}
+  NumIncrease: 0
+  RateIncrease:
+    multiplier: 5
+    tenpow: 0
+  Flora: {fileID: 389874917}
 --- !u!1 &1664330083
 GameObject:
   m_ObjectHideFlags: 0
@@ -20430,8 +20478,8 @@ GameObject:
   - component: {fileID: 1869548808}
   - component: {fileID: 1869548807}
   - component: {fileID: 1869548806}
-  - component: {fileID: 1869548805}
   - component: {fileID: 1869548804}
+  - component: {fileID: 1869548809}
   m_Layer: 5
   m_Name: B_Purchase
   m_TagString: Untagged
@@ -20487,29 +20535,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1869548805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869548802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adac44fc8e7ed514298733a40f68d902, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BaseCost:
-    multiplier: 5
-    tenpow: 2
-  CostMultiplier: 1.7
-  LevelPreText: 
-  CostText: {fileID: 961768083}
-  LevelText: {fileID: 0}
-  DamageMultiplier: 1.2
-  AttackSpeedMultiplier: 0.9
-  DamageText: {fileID: 0}
-  AttackSpeedText: {fileID: 0}
 --- !u!114 &1869548806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20554,7 +20579,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1869548805}
+      - m_Target: {fileID: 1869548809}
         m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
         m_MethodName: PurchaseUpgrade
         m_Mode: 1
@@ -20604,6 +20629,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869548802}
   m_CullTransparentMesh: 1
+--- !u!114 &1869548809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869548802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b582bc406138ad48800610c665b73f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BaseCost:
+    multiplier: 1
+    tenpow: 4
+  CostMultiplier: 2.5
+  LevelPreText: 
+  CostText: {fileID: 961768083}
+  LevelText: {fileID: 0}
+  NumIncrease: 1
+  RateIncrease:
+    multiplier: 0
+    tenpow: 0
+  Flora: {fileID: 389874917}
 --- !u!1 &1883490196
 GameObject:
   m_ObjectHideFlags: 0
@@ -20640,10 +20689,10 @@ RectTransform:
   m_Father: {fileID: 290984781}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 99.98999, y: -93.87018}
+  m_SizeDelta: {x: 199.97998, y: 93.87018}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1883490198
 MonoBehaviour:
@@ -21042,8 +21091,8 @@ GameObject:
   - component: {fileID: 1964646781}
   - component: {fileID: 1964646780}
   - component: {fileID: 1964646779}
-  - component: {fileID: 1964646778}
   - component: {fileID: 1964646777}
+  - component: {fileID: 1964646782}
   m_Layer: 5
   m_Name: B_Unlock
   m_TagString: Untagged
@@ -21099,29 +21148,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1964646778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964646775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adac44fc8e7ed514298733a40f68d902, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BaseCost:
-    multiplier: 5
-    tenpow: 2
-  CostMultiplier: 1.7
-  LevelPreText: 
-  CostText: {fileID: 2037573294}
-  LevelText: {fileID: 0}
-  DamageMultiplier: 1.2
-  AttackSpeedMultiplier: 0.9
-  DamageText: {fileID: 0}
-  AttackSpeedText: {fileID: 0}
 --- !u!114 &1964646779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21166,9 +21192,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1964646778}
-        m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
-        m_MethodName: PurchaseUpgrade
+      - m_Target: {fileID: 1964646782}
+        m_TargetAssemblyTypeName: FloraUnlocker, Assembly-CSharp
+        m_MethodName: TryPurchase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21216,6 +21242,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964646775}
   m_CullTransparentMesh: 1
+--- !u!114 &1964646782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964646775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fff05f95bd8a6a4597761f431b3601e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlatinumCost:
+    multiplier: 8
+    tenpow: 0
+  MinimumMonsterLevel: 10
+  UIManager: {fileID: 814555428}
+  ToUnlock: 1
 --- !u!1 &2007941173
 GameObject:
   m_ObjectHideFlags: 0
@@ -21445,6 +21489,7 @@ GameObject:
   - component: {fileID: 2034502540}
   - component: {fileID: 2034502539}
   - component: {fileID: 2034502538}
+  - component: {fileID: 2034502541}
   m_Layer: 5
   m_Name: KelpPanel
   m_TagString: Untagged
@@ -21542,6 +21587,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2034502536}
   m_CullTransparentMesh: 1
+--- !u!114 &2034502541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034502536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b96c7c987327f642ac95f6d8bae6130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumFlora: 0
+  EarnRatePerFlora:
+    multiplier: 2
+    tenpow: 2
+  TimeBetweenIncome: 0.5
+  NumText: {fileID: 1599811839}
+  IncomeText: {fileID: 1814284106}
 --- !u!1 &2037573292
 GameObject:
   m_ObjectHideFlags: 0
@@ -21600,7 +21664,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: COST
+  m_text: 8 Platinum
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fe7b0ac22d5ae7041a1456fc3f0fa1e3, type: 2}
   m_sharedMaterial: {fileID: 8512056667657933654, guid: fe7b0ac22d5ae7041a1456fc3f0fa1e3, type: 2}
@@ -21848,10 +21912,10 @@ RectTransform:
   m_Father: {fileID: 290984781}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 499.94995, y: -93.87018}
+  m_SizeDelta: {x: 199.97998, y: 93.87018}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2069091503
 MonoBehaviour:
