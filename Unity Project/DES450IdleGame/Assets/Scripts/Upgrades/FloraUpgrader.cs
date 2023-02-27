@@ -8,6 +8,7 @@ public class FloraUpgrader : UpgradeButton
     public BigNumber RateIncrease = BigNumber.Zero();
 
     public FloraData Flora = null;
+    public GameObject ToSpawn = null;
 
     protected override void UpgradeEffects()
     {
@@ -15,6 +16,14 @@ public class FloraUpgrader : UpgradeButton
         {
             Flora.NumFlora += NumIncrease;
             Flora.EarnRatePerFlora += RateIncrease;
+
+            if(ToSpawn)
+            {
+                float randX = Random.Range(-6.5f, 6.5f);
+                float randY = Random.Range(-4.0f, 4.0f);
+
+                Instantiate(ToSpawn, new Vector3(randX, randY, 0.0f), Quaternion.identity);
+            }
         }
     }
 }

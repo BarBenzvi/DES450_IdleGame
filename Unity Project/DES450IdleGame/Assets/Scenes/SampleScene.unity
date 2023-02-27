@@ -2043,6 +2043,7 @@ MonoBehaviour:
     multiplier: 0.5
     tenpow: 0
   Flora: {fileID: 456846053}
+  ToSpawn: {fileID: 0}
 --- !u!1 &217948400
 GameObject:
   m_ObjectHideFlags: 0
@@ -6071,6 +6072,7 @@ MonoBehaviour:
     multiplier: 0
     tenpow: 0
   Flora: {fileID: 2034502541}
+  ToSpawn: {fileID: 6588782072401393244, guid: 9d27d2ac2281420459458bae5627780c, type: 3}
 --- !u!1 &514203034
 GameObject:
   m_ObjectHideFlags: 0
@@ -7413,6 +7415,7 @@ MonoBehaviour:
     multiplier: 0
     tenpow: 0
   Flora: {fileID: 456846053}
+  ToSpawn: {fileID: 1862773515660422481, guid: cec011ba39aab314fbe368f9e5b61cc1, type: 3}
 --- !u!1 &596206218
 GameObject:
   m_ObjectHideFlags: 0
@@ -15295,6 +15298,7 @@ MonoBehaviour:
     multiplier: 1
     tenpow: 2
   Flora: {fileID: 2034502541}
+  ToSpawn: {fileID: 0}
 --- !u!1 &1327833726
 GameObject:
   m_ObjectHideFlags: 0
@@ -18806,6 +18810,7 @@ MonoBehaviour:
     multiplier: 5
     tenpow: 0
   Flora: {fileID: 389874917}
+  ToSpawn: {fileID: 0}
 --- !u!1 &1664330083
 GameObject:
   m_ObjectHideFlags: 0
@@ -20653,6 +20658,7 @@ MonoBehaviour:
     multiplier: 0
     tenpow: 0
   Flora: {fileID: 389874917}
+  ToSpawn: {fileID: 5304920147447582918, guid: 3f30cf587705eb8448b8947f0797717b, type: 3}
 --- !u!1 &1883490196
 GameObject:
   m_ObjectHideFlags: 0
