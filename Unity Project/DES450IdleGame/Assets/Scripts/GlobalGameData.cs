@@ -15,4 +15,11 @@ public abstract class GlobalGameData
     public static BigNumber BoatIncomeMultiplier = new BigNumber(1, 0);
     public static BigNumber BoatHealthMultiplier = new BigNumber(1, 0);
     public static float     BoatSpawnrateMultiplier = 0.2f;
+
+    public static BigNumber GlobalCurrencyMultiplier = new BigNumber(1, 0);
+
+    public static BigNumber ClickDamageMultiplier = new BigNumber(1, 0);
+    public static BigNumber ClickIncomeMultiplier = new BigNumber(1, 0);
+    public static BigNumber FloraMultiplier = new BigNumber(1, 0);
+    public static BigNumber MonsterDamageMultiplier = new BigNumber(1, 0);
 }

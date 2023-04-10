@@ -31,11 +31,11 @@ public class CursorUpgrader : UpgradeButton
 
         if(DamageText)
         {
-            DamageText.text = "Damage: " + c.DamagePerClick.ToString();
+            DamageText.text = "Damage: " + (c.DamagePerClick * GlobalGameData.ClickDamageMultiplier).ToString();
         }
         if (IncomeText)
         {
-            IncomeText.text = "Click Income: " + c.CoinsPerClick.ToString();
+            IncomeText.text = "Click Income: " + (c.CoinsPerClick * GlobalGameData.ClickIncomeMultiplier * GlobalGameData.GlobalCurrencyMultiplier).ToString();
         }
     }
 }

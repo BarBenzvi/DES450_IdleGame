@@ -44,7 +44,7 @@ public class FloraData : MonoBehaviour
         }
         if(IncomeText)
         {
-            IncomeText.text = "Passive Income: " + (EarnRatePerFlora * NumFlora).ToString();
+            IncomeText.text = "Passive Income: " + (EarnRatePerFlora  * GlobalGameData.GlobalCurrencyMultiplier * GlobalGameData.FloraMultiplier * NumFlora).ToString();
         }
     }
 }

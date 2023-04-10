@@ -45,6 +45,11 @@ public class CheatcodeManager : MonoBehaviour
                     BigNumber.SetDisplayType(BigNumber.DisplayType.NAMES);
                 }
             }
+
+            if(Input.GetKeyUp(KeyCode.S))
+            {
+                GlobalGameData.SkillTreePoints += 1;
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class UpgradeButton : MonoBehaviour
@@ -12,6 +13,7 @@ public class UpgradeButton : MonoBehaviour
 
     public TextMeshProUGUI CostText = null;
     public TextMeshProUGUI LevelText = null;
+    public Button ConnectedButton = null;
 
     BigNumber currCost;
     
@@ -26,6 +28,10 @@ public class UpgradeButton : MonoBehaviour
     private void Update()
     {
         UpdateText();
+        if(ConnectedButton)
+        {
+            ConnectedButton.interactable = CanAfford();
+        }
     }
 
     protected virtual void UpdateText()
@@ -43,6 +49,16 @@ public class UpgradeButton : MonoBehaviour
     virtual protected void UpgradeEffects()
     {}
 
+    virtual protected bool CanAfford()
+    {
+        if(GlobalGameData.Coins < currCost)
+        {
+            return false;
+        }
+
+        return true;
+    }
+
     public void PurchaseUpgrade()
     {
         if (currCost <= GlobalGameData.Coins)
@@ -57,6 +73,20 @@ public class UpgradeButton : MonoBehaviour
         else
         {
             // Play Sound?
+        }
+    }
+
+    public void ChangeMultiplier(float multiplier)
+    {
+        CostMultiplier *= multiplier;
+    }
+
+    public void FullyRecalculateCost()
+    {
+        currCost = BaseCost;
+        for(int i = 0; i < timesPurchased; ++i)
+        {
+            currCost *= CostMultiplier;
         }
     }
 }

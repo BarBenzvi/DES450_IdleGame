@@ -42,7 +42,7 @@ public class BoatUpgrader : UpgradeButton
 
             if (IncomeText)
             {
-                BigNumber medianIncome = (bb.MinCoins + bb.MaxCoins) * GlobalGameData.BoatIncomeMultiplier / 2.0f;
+                BigNumber medianIncome = (bb.MinCoins + bb.MaxCoins) * GlobalGameData.BoatIncomeMultiplier * GlobalGameData.GlobalCurrencyMultiplier / 2.0f;
                 IncomeText.text = "Income: " + medianIncome.ToString();
             }
             if(HealthText)

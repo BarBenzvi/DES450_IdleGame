@@ -25,11 +25,11 @@ public class CursorBehavior : MonoBehaviour
                 // If clicking on a boat, deal damage. otherwise increase coins
                 if (collidingBoat)
                 {
-                    collidingBoat.ApplyDamage(DamagePerClick);
+                    collidingBoat.ApplyDamage(DamagePerClick * GlobalGameData.ClickDamageMultiplier);
                 }
                 else
                 {
-                    GlobalGameData.Coins += CoinsPerClick;
+                    GlobalGameData.Coins += CoinsPerClick * GlobalGameData.ClickIncomeMultiplier * GlobalGameData.GlobalCurrencyMultiplier;
                 }
             }
         }

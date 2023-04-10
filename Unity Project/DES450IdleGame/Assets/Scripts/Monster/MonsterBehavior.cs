@@ -17,6 +17,8 @@ public class MonsterBehavior : MonoBehaviour
 
     public int Level = 1;
 
+    public bool Income = false;
+
     Rigidbody2D rb2d = null;
     GameObject currBoat = null;
     float currSpeedMultiplier = 1.0f;
@@ -35,6 +37,11 @@ public class MonsterBehavior : MonoBehaviour
 
     void Update()
     {
+        if(Income)
+        {
+            GlobalGameData.Coins += BaseDamage * GlobalGameData.MonsterDamageMultiplier * GlobalGameData.GlobalCurrencyMultiplier * Time.deltaTime;
+        }
+
         if(currBoat == null)
         {
             GetTargetBoat();
@@ -103,7 +110,7 @@ public class MonsterBehavior : MonoBehaviour
 
         if(colliding && timer <= 0.0f)
         {
-            currBoat.GetComponent<Health>().ApplyDamage(BaseDamage);
+            currBoat.GetComponent<Health>().ApplyDamage(BaseDamage * GlobalGameData.MonsterDamageMultiplier);
 
             timer = AttackCooldown;
         }
