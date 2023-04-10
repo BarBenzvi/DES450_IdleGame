@@ -12,6 +12,7 @@ public class BasicSkillTreeEffect : SkillTreeEffect
     public float MonsterDamageMultiplier = 1.0f;
     public float FloraCostMultiplier = 1.0f;
     public bool MonsterCoins = false;
+    public bool RareBoats = false;
 
 
     protected override void ActivateEffects()
@@ -40,6 +41,11 @@ public class BasicSkillTreeEffect : SkillTreeEffect
         if(MonsterCoins)
         {
             GameObject.Find("SeaMonster").GetComponent<MonsterBehavior>().Income = true;
+        }
+
+        if(RareBoats)
+        {
+            GameObject.Find("BoatSpawner").GetComponent<BoatSpawner>().RareBoats = true;
         }
     }
 }

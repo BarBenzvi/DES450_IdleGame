@@ -1535,9 +1535,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseCost:
-    multiplier: 5
+    multiplier: 4
     tenpow: 2
-  CostMultiplier: 1.7
+  CostMultiplier: 1.5
   LevelPreText: 'Level: '
   CostText: {fileID: 1478908948}
   LevelText: {fileID: 1177115467}
@@ -1890,6 +1890,7 @@ MonoBehaviour:
   MonsterDamageMultiplier: 1
   FloraCostMultiplier: 1
   MonsterCoins: 0
+  RareBoats: 0
 --- !u!1 &177340018
 GameObject:
   m_ObjectHideFlags: 0
@@ -2099,7 +2100,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 179386021}
         m_TargetAssemblyTypeName: SkillTreeEffect, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: TryPurchase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2130,13 +2131,14 @@ MonoBehaviour:
   - {fileID: 1776984295}
   Purchased: 0
   GlobalCurrencyMultiplier: 1
-  BoatIncomeMultiplier: 2
+  BoatIncomeMultiplier: 3.5
   ClickDamageMultiplier: 1
   ClickIncomeMultiplier: 1
   FloraMultiplier: 1
   MonsterDamageMultiplier: 1
   FloraCostMultiplier: 1
   MonsterCoins: 0
+  RareBoats: 0
 --- !u!1 &187663394
 GameObject:
   m_ObjectHideFlags: 0
@@ -2460,7 +2462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseCost:
-    multiplier: 9
+    multiplier: 7
     tenpow: 1
   CostMultiplier: 1.5
   LevelPreText: 'Level: '
@@ -2847,6 +2849,7 @@ MonoBehaviour:
   MonsterDamageMultiplier: 1
   FloraCostMultiplier: 0.9
   MonsterCoins: 0
+  RareBoats: 0
 --- !u!1 &239171610
 GameObject:
   m_ObjectHideFlags: 0
@@ -5983,13 +5986,13 @@ MonoBehaviour:
   BaseCost:
     multiplier: 2.5
     tenpow: 2
-  CostMultiplier: 1.5
+  CostMultiplier: 1.7
   LevelPreText: 'Boat Level: '
   CostText: {fileID: 510868017}
   LevelText: {fileID: 554535143}
   ConnectedButton: {fileID: 454108022}
-  IncomeMultiplier: 1.2
-  HealthMultiplier: 1.4
+  IncomeMultiplier: 1.5
+  HealthMultiplier: 1.35
   SpawnRateIncrease: 0
   IncomeText: {fileID: 814827245}
   HealthText: {fileID: 1603670974}
@@ -6395,13 +6398,14 @@ MonoBehaviour:
   - {fileID: 643021116}
   Purchased: 0
   GlobalCurrencyMultiplier: 1
-  BoatIncomeMultiplier: 2
+  BoatIncomeMultiplier: 3.5
   ClickDamageMultiplier: 1
   ClickIncomeMultiplier: 1
   FloraMultiplier: 1
   MonsterDamageMultiplier: 1
   FloraCostMultiplier: 1
   MonsterCoins: 0
+  RareBoats: 1
 --- !u!1 &464106092
 GameObject:
   m_ObjectHideFlags: 0
@@ -6563,7 +6567,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 486755485}
         m_TargetAssemblyTypeName: SkillTreeEffect, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: TryPurchase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6599,9 +6603,10 @@ MonoBehaviour:
   ClickDamageMultiplier: 1
   ClickIncomeMultiplier: 1
   FloraMultiplier: 1
-  MonsterDamageMultiplier: 2
+  MonsterDamageMultiplier: 3.5
   FloraCostMultiplier: 1
   MonsterCoins: 0
+  RareBoats: 0
 --- !u!1 &504843110
 GameObject:
   m_ObjectHideFlags: 0
@@ -7194,9 +7199,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseCost:
-    multiplier: 2
+    multiplier: 1.1
     tenpow: 6
-  CostMultiplier: 2.5
+  CostMultiplier: 1.8
   LevelPreText: 
   CostText: {fileID: 63542669}
   LevelText: {fileID: 0}
@@ -8405,9 +8410,10 @@ MonoBehaviour:
   ClickDamageMultiplier: 1
   ClickIncomeMultiplier: 1
   FloraMultiplier: 1
-  MonsterDamageMultiplier: 2
+  MonsterDamageMultiplier: 3.5
   FloraCostMultiplier: 1
   MonsterCoins: 0
+  RareBoats: 0
 --- !u!1 &569105728
 GameObject:
   m_ObjectHideFlags: 0
@@ -8941,9 +8947,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseCost:
-    multiplier: 1
-    tenpow: 2
-  CostMultiplier: 2.5
+    multiplier: 5
+    tenpow: 1
+  CostMultiplier: 1.8
   LevelPreText: 
   CostText: {fileID: 876896043}
   LevelText: {fileID: 0}
@@ -10450,13 +10456,14 @@ MonoBehaviour:
   - {fileID: 1934344295}
   Purchased: 0
   GlobalCurrencyMultiplier: 1
-  BoatIncomeMultiplier: 2
+  BoatIncomeMultiplier: 3.5
   ClickDamageMultiplier: 1
   ClickIncomeMultiplier: 1
   FloraMultiplier: 1
   MonsterDamageMultiplier: 1
   FloraCostMultiplier: 1
   MonsterCoins: 0
+  RareBoats: 0
 --- !u!1 &648201230
 GameObject:
   m_ObjectHideFlags: 0
@@ -10621,6 +10628,7 @@ MonoBehaviour:
   MonsterDamageMultiplier: 1
   FloraCostMultiplier: 1
   MonsterCoins: 1
+  RareBoats: 0
 --- !u!1 &649273898
 GameObject:
   m_ObjectHideFlags: 0
@@ -11021,6 +11029,7 @@ MonoBehaviour:
   MonsterDamageMultiplier: 1
   FloraCostMultiplier: 1
   MonsterCoins: 0
+  RareBoats: 0
 --- !u!1 &663458765
 GameObject:
   m_ObjectHideFlags: 0
@@ -11259,9 +11268,10 @@ MonoBehaviour:
   ClickDamageMultiplier: 1
   ClickIncomeMultiplier: 1
   FloraMultiplier: 1
-  MonsterDamageMultiplier: 2
+  MonsterDamageMultiplier: 3.5
   FloraCostMultiplier: 1
   MonsterCoins: 0
+  RareBoats: 0
 --- !u!1 &694192711
 GameObject:
   m_ObjectHideFlags: 0
@@ -15083,6 +15093,7 @@ MonoBehaviour:
   MonsterDamageMultiplier: 1
   FloraCostMultiplier: 1
   MonsterCoins: 0
+  RareBoats: 0
 --- !u!1 &949568599
 GameObject:
   m_ObjectHideFlags: 0
@@ -15248,6 +15259,7 @@ MonoBehaviour:
   MonsterDamageMultiplier: 1
   FloraCostMultiplier: 1
   MonsterCoins: 0
+  RareBoats: 0
 --- !u!1 &961768081
 GameObject:
   m_ObjectHideFlags: 0
@@ -17464,6 +17476,7 @@ MonoBehaviour:
   MonsterDamageMultiplier: 1
   FloraCostMultiplier: 1
   MonsterCoins: 0
+  RareBoats: 0
 --- !u!1 &1133283773
 GameObject:
   m_ObjectHideFlags: 0
@@ -18094,8 +18107,10 @@ MonoBehaviour:
   SpawnTimeRange: {x: 1, y: 1}
   SpawnCountRange: {x: 1, y: 1}
   BoatPrefab: {fileID: 4770620366287115769, guid: 6b5fed7f581c9684e9b7c93d59ee7e1f, type: 3}
+  RareBoatPrefab: {fileID: 4504558674157001161, guid: bc95e57615852f742b07b1f487b41456, type: 3}
   HealthbarParent: {fileID: 1600289087}
   XYExtents: {x: 10.5, y: 6.5}
+  RareBoats: 0
 --- !u!4 &1248177796
 Transform:
   m_ObjectHideFlags: 0
@@ -19483,7 +19498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseCost:
-    multiplier: 1.9
+    multiplier: 1.5
     tenpow: 6
   CostMultiplier: 1.5
   LevelPreText: 'Level: '
@@ -22003,6 +22018,7 @@ MonoBehaviour:
   MonsterDamageMultiplier: 1
   FloraCostMultiplier: 1
   MonsterCoins: 0
+  RareBoats: 0
 --- !u!1 &1521474432
 GameObject:
   m_ObjectHideFlags: 0
@@ -23913,7 +23929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseCost:
-    multiplier: 9
+    multiplier: 6
     tenpow: 3
   CostMultiplier: 1.5
   LevelPreText: 'Level: '
@@ -25075,13 +25091,14 @@ MonoBehaviour:
   - {fileID: 643021116}
   Purchased: 0
   GlobalCurrencyMultiplier: 1
-  BoatIncomeMultiplier: 2
+  BoatIncomeMultiplier: 3.5
   ClickDamageMultiplier: 1
   ClickIncomeMultiplier: 1
   FloraMultiplier: 1
   MonsterDamageMultiplier: 1
   FloraCostMultiplier: 1
   MonsterCoins: 0
+  RareBoats: 0
 --- !u!1 &1777265534
 GameObject:
   m_ObjectHideFlags: 0
@@ -26256,9 +26273,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseCost:
-    multiplier: 1
-    tenpow: 4
-  CostMultiplier: 2.5
+    multiplier: 4
+    tenpow: 3
+  CostMultiplier: 1.8
   LevelPreText: 
   CostText: {fileID: 961768083}
   LevelText: {fileID: 0}
@@ -26635,7 +26652,7 @@ MonoBehaviour:
   PurchasedColor: {r: 1, g: 1, b: 1, a: 1}
   Prereqs: []
   Purchased: 0
-  GlobalCurrencyMultiplier: 2
+  GlobalCurrencyMultiplier: 4
   BoatIncomeMultiplier: 1
   ClickDamageMultiplier: 1
   ClickIncomeMultiplier: 1
@@ -26643,6 +26660,7 @@ MonoBehaviour:
   MonsterDamageMultiplier: 1
   FloraCostMultiplier: 1
   MonsterCoins: 0
+  RareBoats: 0
 --- !u!1 &1947621372
 GameObject:
   m_ObjectHideFlags: 0
@@ -28040,6 +28058,7 @@ MonoBehaviour:
   MonsterDamageMultiplier: 1
   FloraCostMultiplier: 1
   MonsterCoins: 0
+  RareBoats: 0
 --- !u!1 &2067945750
 GameObject:
   m_ObjectHideFlags: 0

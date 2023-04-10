@@ -7,8 +7,10 @@ public class BoatSpawner : MonoBehaviour
     public Vector2 SpawnTimeRange = new Vector2(4.0f, 6.0f);
     public Vector2Int SpawnCountRange = new Vector2Int(1, 3);
     public GameObject BoatPrefab = null;
+    public GameObject RareBoatPrefab = null;
     public GameObject HealthbarParent = null;
     public Vector2 XYExtents = new Vector2(10.5f, 6.5f);
+    public bool RareBoats = false;
 
     float timer = 0.0f;
     void Start()
@@ -46,7 +48,16 @@ public class BoatSpawner : MonoBehaviour
                 float x = side < 2 ? XYExtents.x * ((side * 2) - 1) : Random.Range(-9.0f, 9.0f);
                 float y = side > 1 ? XYExtents.y * (((side - 2) * 2) - 1) : Random.Range(-5.0f, 5.0f);
 
-                GameObject b = Instantiate(BoatPrefab, new Vector3(x, y, 0.0f), Quaternion.identity);
+                GameObject toSpawn = BoatPrefab;
+                if(RareBoats)
+                {
+                    if(Random.Range(0, 100) > 95)
+                    {
+                        toSpawn = RareBoatPrefab;
+                    }
+                }
+
+                GameObject b = Instantiate(toSpawn, new Vector3(x, y, 0.0f), Quaternion.identity);
                 Health bH = b.GetComponent<Health>();
                 bH.SpawnHealthbar(HealthbarParent);
                 bH.SetHealth(bH.StartHealth * GlobalGameData.BoatHealthMultiplier);
