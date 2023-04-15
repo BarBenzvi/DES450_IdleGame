@@ -24,10 +24,12 @@ public class BasicSkillTreeEffect : SkillTreeEffect
         GlobalGameData.ClickIncomeMultiplier *= ClickIncomeMultiplier;
         GlobalGameData.FloraMultiplier *= FloraMultiplier;
         GlobalGameData.MonsterDamageMultiplier *= MonsterDamageMultiplier;
+        //GlobalGameData.FloraCostMultiplier *= FloraCostMultiplier;
 
         if (FloraCostMultiplier != 1.0f)
         {
             FloraUpgrader[] floras = FindObjectsOfType<FloraUpgrader>();
+            Debug.Log(floras.Length);
             foreach(FloraUpgrader flora in floras)
             {
                 if(flora.NumIncrease != 0)
