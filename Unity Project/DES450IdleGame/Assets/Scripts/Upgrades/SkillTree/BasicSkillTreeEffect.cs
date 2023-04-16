@@ -17,6 +17,7 @@ public class BasicSkillTreeEffect : SkillTreeEffect
     public bool InstakillClick = false;
     public bool SpellClick = false;
     public bool MonsterBuff = false;
+    public bool FloraDamageBuff = false;
 
 
     protected override void ActivateEffects()
@@ -49,6 +50,11 @@ public class BasicSkillTreeEffect : SkillTreeEffect
             GameObject m = GameObject.Find("SeaMonster");
             m.GetComponent<MonsterBehavior>().AOEAttack = true;
             m.GetComponent<BoxCollider2D>().size *= 3; // Triple collider size so AOE is more impactful
+        }
+
+        if(FloraDamageBuff)
+        {
+            GameObject.Find("SeaMonster").GetComponent<MonsterBehavior>().FloraBuff = true;
         }
 
         if(RareBoats)

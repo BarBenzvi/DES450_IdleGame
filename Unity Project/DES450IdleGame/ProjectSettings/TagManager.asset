@@ -6,6 +6,8 @@ TagManager:
   tags:
   - UIZone
   - Boat
+  - FxTemporaire
+  - Flora
   layers:
   - Default
   - TransparentFX

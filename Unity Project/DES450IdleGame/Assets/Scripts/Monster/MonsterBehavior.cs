@@ -19,6 +19,12 @@ public class MonsterBehavior : MonoBehaviour
 
     public bool Income = false;
     public bool AOEAttack = false;
+    public bool FloraBuff = false;
+
+    [HideInInspector]
+    public bool ClickDamageBuffActive = false;
+    [HideInInspector]
+    public bool FloraDamageBuffActive = false;
 
     Rigidbody2D rb2d = null;
     GameObject currBoat = null;
@@ -28,6 +34,8 @@ public class MonsterBehavior : MonoBehaviour
     Vector2 dir = Vector2.zero;
     bool colliding = false;
     float timer = 0.0f;
+    float clickTimer = 0.0f;
+    int collidingFlora = 0;
 
     public GameObject HitVFX_1;
     public GameObject HitVFX_2;
@@ -47,6 +55,15 @@ public class MonsterBehavior : MonoBehaviour
         if(Income)
         {
             GlobalGameData.Coins += BaseDamage * GlobalGameData.MonsterDamageMultiplier * GlobalGameData.GlobalCurrencyMultiplier * Time.deltaTime;
+        }
+
+        if(ClickDamageBuffActive)
+        {
+            clickTimer -= Time.deltaTime;
+            if(clickTimer <= 0.0f)
+            {
+                ClickDamageBuffActive = false;
+            }
         }
 
         if(currBoat == null)
@@ -117,16 +134,27 @@ public class MonsterBehavior : MonoBehaviour
 
         if(colliding && timer <= 0.0f)
         {
-            if(AOEAttack)
+            BigNumber damage = BaseDamage * GlobalGameData.MonsterDamageMultiplier;
+
+            if(ClickDamageBuffActive)
+            {
+                damage *= 2.5f;
+            }
+            if(FloraDamageBuffActive)
+            {
+                damage *= 2.5f;
+            }
+
+            if (AOEAttack)
             {
                 foreach(GameObject boat in currBoats)
                 {
-                    boat.GetComponent<Health>().ApplyDamage(BaseDamage * GlobalGameData.MonsterDamageMultiplier);
+                    boat.GetComponent<Health>().ApplyDamage(damage);
                 }
             }
             else
             {
-                currBoat.GetComponent<Health>().ApplyDamage(BaseDamage * GlobalGameData.MonsterDamageMultiplier);
+                currBoat.GetComponent<Health>().ApplyDamage(damage);
             }
 
             timer = AttackCooldown;
@@ -228,6 +256,12 @@ public class MonsterBehavior : MonoBehaviour
         {
             colliding = true;
         }
+
+        if (FloraBuff && collision.CompareTag("Flora"))
+        {
+            collidingFlora += 1;
+            FloraDamageBuffActive = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -243,6 +277,15 @@ public class MonsterBehavior : MonoBehaviour
         if (collision.gameObject == currBoat)
         {
             colliding = false;
+        }
+
+        if(FloraBuff && collision.CompareTag("Flora"))
+        {
+            collidingFlora -= 1;
+            if(collidingFlora == 0)
+            {
+                FloraDamageBuffActive = false;
+            }
         }
     }
 
