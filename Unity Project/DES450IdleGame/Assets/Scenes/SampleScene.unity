@@ -2096,7 +2096,7 @@ GameObject:
   - component: {fileID: 155387934}
   - component: {fileID: 155387933}
   - component: {fileID: 155387935}
-  - component: {fileID: 155387936}
+  - component: {fileID: 155387937}
   m_Layer: 5
   m_Name: BloomSpell
   m_TagString: UIZone
@@ -2207,7 +2207,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 155387936}
+      - m_Target: {fileID: 155387937}
         m_TargetAssemblyTypeName: SkillTreeEffect, Assembly-CSharp
         m_MethodName: TryPurchase
         m_Mode: 1
@@ -2219,7 +2219,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &155387936
+--- !u!114 &155387937
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2228,7 +2228,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 155387931}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32ff15b0cb01fd48860d81993d08093, type: 3}
+  m_Script: {fileID: 11500000, guid: 91cf6784a48b8234baa5db8a46010f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Connectors:
@@ -2240,18 +2240,8 @@ MonoBehaviour:
   Prereqs:
   - {fileID: 949568604}
   Purchased: 0
-  GlobalCurrencyMultiplier: 1
-  BoatIncomeMultiplier: 1
-  ClickDamageMultiplier: 1
-  ClickIncomeMultiplier: 1
-  FloraMultiplier: 2
-  MonsterDamageMultiplier: 1
-  FloraCostMultiplier: 1
-  MonsterCoins: 0
-  RareBoats: 0
-  InstakillClick: 0
-  SpellClick: 0
-  MonsterBuff: 0
+  ToUnlock: {fileID: 642315117}
+  SManager: {fileID: 180583219}
 --- !u!1 &155687974
 GameObject:
   m_ObjectHideFlags: 0
@@ -2816,7 +2806,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 179386016}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32ff15b0cb01fd48860d81993d08093, type: 3}
+  m_Script: {fileID: 11500000, guid: 91cf6784a48b8234baa5db8a46010f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Connectors: []
@@ -2825,20 +2815,10 @@ MonoBehaviour:
   PurchasedColor: {r: 1, g: 1, b: 1, a: 1}
   Prereqs:
   - {fileID: 463725634}
-  - {fileID: 1776984295}
+  - {fileID: 1776984296}
   Purchased: 0
-  GlobalCurrencyMultiplier: 1
-  BoatIncomeMultiplier: 3.5
-  ClickDamageMultiplier: 1
-  ClickIncomeMultiplier: 1
-  FloraMultiplier: 1
-  MonsterDamageMultiplier: 1
-  FloraCostMultiplier: 1
-  MonsterCoins: 0
-  RareBoats: 0
-  InstakillClick: 0
-  SpellClick: 0
-  MonsterBuff: 0
+  ToUnlock: {fileID: 329574096}
+  SManager: {fileID: 180583219}
 --- !u!1 &180583218
 GameObject:
   m_ObjectHideFlags: 0
@@ -2874,8 +2854,7 @@ MonoBehaviour:
   - {fileID: 210382809}
   - {fileID: 1830400751}
   - {fileID: 329574096}
-  ActiveSpells:
-  - {fileID: 927139453}
+  ActiveSpells: []
 --- !u!4 &180583220
 Transform:
   m_ObjectHideFlags: 0
@@ -3278,7 +3257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cooldown: 600
   ActiveTime: 60
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 17183caeb3b15a649a2c44816608f701, type: 3}
   Active: 0
   Timer: 0
   GlobalIncomeMulitplier: 1
@@ -3572,7 +3551,7 @@ MonoBehaviour:
   PurchasedColor: {r: 1, g: 1, b: 1, a: 1}
   Prereqs:
   - {fileID: 2053228643}
-  - {fileID: 949568604}
+  - {fileID: 155387937}
   Purchased: 0
   GlobalCurrencyMultiplier: 1
   BoatIncomeMultiplier: 1
@@ -4769,7 +4748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cooldown: 300
   ActiveTime: 0
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 5de01b725d897924493c52243087bb14, type: 3}
   Active: 0
   Timer: 0
 --- !u!1 &336241921
@@ -9369,7 +9348,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 559027680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32ff15b0cb01fd48860d81993d08093, type: 3}
+  m_Script: {fileID: 11500000, guid: 91cf6784a48b8234baa5db8a46010f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Connectors: []
@@ -9380,18 +9359,8 @@ MonoBehaviour:
   - {fileID: 648201235}
   - {fileID: 486755485}
   Purchased: 0
-  GlobalCurrencyMultiplier: 1
-  BoatIncomeMultiplier: 1
-  ClickDamageMultiplier: 1
-  ClickIncomeMultiplier: 1
-  FloraMultiplier: 1
-  MonsterDamageMultiplier: 3.5
-  FloraCostMultiplier: 1
-  MonsterCoins: 0
-  RareBoats: 0
-  InstakillClick: 0
-  SpellClick: 0
-  MonsterBuff: 0
+  ToUnlock: {fileID: 1830400751}
+  SManager: {fileID: 180583219}
 --- !u!1 &569105728
 GameObject:
   m_ObjectHideFlags: 0
@@ -11322,7 +11291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cooldown: 600
   ActiveTime: 60
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: bd096f0839abcc24bb9d2000de07ffb6, type: 3}
   Active: 0
   Timer: 0
   GlobalIncomeMulitplier: 1
@@ -11483,7 +11452,7 @@ MonoBehaviour:
   MyButton: {fileID: 643021115}
   PurchasedColor: {r: 1, g: 1, b: 1, a: 1}
   Prereqs:
-  - {fileID: 1934344295}
+  - {fileID: 1934344298}
   Purchased: 0
   GlobalCurrencyMultiplier: 1
   BoatIncomeMultiplier: 3.5
@@ -12430,7 +12399,7 @@ MonoBehaviour:
   MyButton: {fileID: 674601868}
   PurchasedColor: {r: 1, g: 1, b: 1, a: 1}
   Prereqs:
-  - {fileID: 1934344295}
+  - {fileID: 1934344298}
   Purchased: 0
   GlobalCurrencyMultiplier: 1
   BoatIncomeMultiplier: 1
@@ -16556,7 +16525,7 @@ MonoBehaviour:
   MyButton: {fileID: 949568603}
   PurchasedColor: {r: 1, g: 1, b: 1, a: 1}
   Prereqs:
-  - {fileID: 1934344295}
+  - {fileID: 1934344298}
   Purchased: 0
   GlobalCurrencyMultiplier: 1
   BoatIncomeMultiplier: 1
@@ -23673,7 +23642,7 @@ MonoBehaviour:
   MyButton: {fileID: 1516578459}
   PurchasedColor: {r: 1, g: 1, b: 1, a: 1}
   Prereqs:
-  - {fileID: 1934344295}
+  - {fileID: 1934344298}
   Purchased: 0
   GlobalCurrencyMultiplier: 1
   BoatIncomeMultiplier: 1
@@ -26766,7 +26735,7 @@ GameObject:
   - component: {fileID: 1776984293}
   - component: {fileID: 1776984292}
   - component: {fileID: 1776984294}
-  - component: {fileID: 1776984295}
+  - component: {fileID: 1776984296}
   m_Layer: 5
   m_Name: SwarmSpell
   m_TagString: UIZone
@@ -26877,7 +26846,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1776984295}
+      - m_Target: {fileID: 1776984296}
         m_TargetAssemblyTypeName: SkillTreeEffect, Assembly-CSharp
         m_MethodName: TryPurchase
         m_Mode: 1
@@ -26889,7 +26858,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1776984295
+--- !u!114 &1776984296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26898,7 +26867,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1776984290}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32ff15b0cb01fd48860d81993d08093, type: 3}
+  m_Script: {fileID: 11500000, guid: 91cf6784a48b8234baa5db8a46010f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Connectors:
@@ -26910,18 +26879,8 @@ MonoBehaviour:
   Prereqs:
   - {fileID: 643021116}
   Purchased: 0
-  GlobalCurrencyMultiplier: 1
-  BoatIncomeMultiplier: 3.5
-  ClickDamageMultiplier: 1
-  ClickIncomeMultiplier: 1
-  FloraMultiplier: 1
-  MonsterDamageMultiplier: 1
-  FloraCostMultiplier: 1
-  MonsterCoins: 0
-  RareBoats: 0
-  InstakillClick: 0
-  SpellClick: 0
-  MonsterBuff: 0
+  ToUnlock: {fileID: 210382809}
+  SManager: {fileID: 180583219}
 --- !u!1 &1777265534
 GameObject:
   m_ObjectHideFlags: 0
@@ -27373,7 +27332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cooldown: 300
   ActiveTime: 60
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 73556323f471eaa40bc8b7ca8928683c, type: 3}
   Active: 0
   Timer: 0
   DoppelTint: {r: 0.9528302, g: 0.6687789, b: 0.6687789, a: 1}
@@ -28686,7 +28645,7 @@ GameObject:
   - component: {fileID: 1934344293}
   - component: {fileID: 1934344292}
   - component: {fileID: 1934344294}
-  - component: {fileID: 1934344295}
+  - component: {fileID: 1934344298}
   - component: {fileID: 1934344296}
   - component: {fileID: 1934344297}
   m_Layer: 5
@@ -28799,7 +28758,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1934344295}
+      - m_Target: {fileID: 1934344298}
         m_TargetAssemblyTypeName: SkillTreeEffect, Assembly-CSharp
         m_MethodName: TryPurchase
         m_Mode: 1
@@ -28811,38 +28770,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1934344295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934344290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32ff15b0cb01fd48860d81993d08093, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Connectors:
-  - {fileID: 384977747}
-  - {fileID: 1564229357}
-  ConnectorEnabledColor: {r: 1, g: 1, b: 1, a: 1}
-  MyButton: {fileID: 1934344294}
-  PurchasedColor: {r: 1, g: 1, b: 1, a: 1}
-  Prereqs: []
-  Purchased: 0
-  GlobalCurrencyMultiplier: 4
-  BoatIncomeMultiplier: 1
-  ClickDamageMultiplier: 1
-  ClickIncomeMultiplier: 1
-  FloraMultiplier: 1
-  MonsterDamageMultiplier: 1
-  FloraCostMultiplier: 1
-  MonsterCoins: 0
-  RareBoats: 0
-  InstakillClick: 0
-  SpellClick: 0
-  MonsterBuff: 0
 --- !u!114 &1934344296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28905,6 +28832,28 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1934344298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934344290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91cf6784a48b8234baa5db8a46010f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Connectors:
+  - {fileID: 384977747}
+  - {fileID: 1564229357}
+  ConnectorEnabledColor: {r: 1, g: 1, b: 1, a: 1}
+  MyButton: {fileID: 1934344294}
+  PurchasedColor: {r: 1, g: 1, b: 1, a: 1}
+  Prereqs: []
+  Purchased: 0
+  ToUnlock: {fileID: 927139453}
+  SManager: {fileID: 180583219}
 --- !u!1 &1947621372
 GameObject:
   m_ObjectHideFlags: 0
