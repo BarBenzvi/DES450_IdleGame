@@ -83,12 +83,10 @@ public class UpgradeButton : MonoBehaviour
 
     public void FullyRecalculateCost()
     {
-        Debug.Log("Before: " + currCost);
         currCost = BaseCost;
         for(int i = 0; i < timesPurchased; ++i)
         {
             currCost *= CostMultiplier;
         }
-        Debug.Log("After: " + currCost);
     }
 }
