@@ -11,6 +11,8 @@ public class SpellEffect : MonoBehaviour
     // Just used for display purposes
     public Sprite Icon;
 
+    public GameObject ParticlesToEnable = null;
+
     [HideInInspector]
     public bool Active = false;
     [HideInInspector]
@@ -28,11 +30,17 @@ public class SpellEffect : MonoBehaviour
 
     public virtual void ActivateEffects()
     {
-
+        if(ParticlesToEnable != null)
+        {
+            ParticlesToEnable.SetActive(true);
+        }
     }
 
     public virtual void DeactivateEffects()
     {
-
+        if (ParticlesToEnable != null)
+        {
+            ParticlesToEnable.SetActive(false);
+        }
     }
 }
