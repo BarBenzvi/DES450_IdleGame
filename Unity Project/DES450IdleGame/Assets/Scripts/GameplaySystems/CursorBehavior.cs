@@ -58,7 +58,8 @@ public class CursorBehavior : MonoBehaviour
 
                 if(collidingMonster && MonsterBuff)
                 {
-                    // Give monster the temporary damage boost
+                    collidingMonster.ClickDamageBuffActive = true;
+                    collidingMonster.clickTimer = 5.0f;
                 }
             }
         }

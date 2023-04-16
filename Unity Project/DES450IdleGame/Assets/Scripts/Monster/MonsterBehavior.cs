@@ -34,7 +34,8 @@ public class MonsterBehavior : MonoBehaviour
     Vector2 dir = Vector2.zero;
     bool colliding = false;
     float timer = 0.0f;
-    float clickTimer = 0.0f;
+    [HideInInspector]
+    public float clickTimer = 0.0f;
     int collidingFlora = 0;
 
     public GameObject HitVFX_1;

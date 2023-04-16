@@ -7415,10 +7415,10 @@ MonoBehaviour:
   ClickDamageMultiplier: 1
   ClickIncomeMultiplier: 1
   FloraMultiplier: 1
-  MonsterDamageMultiplier: 3.5
+  MonsterDamageMultiplier: 1
   FloraCostMultiplier: 1
   MonsterCoins: 0
-  MonsterAOE: 0
+  MonsterAOE: 1
   RareBoats: 0
   InstakillClick: 0
   SpellClick: 0
@@ -11723,7 +11723,7 @@ MonoBehaviour:
   TooltipPositionOffset: {x: 3, y: 0}
   TooltipOffsetMultiplier: 1
   DisplayName: High Class
-  DisplayTooltip: Doubles boat income
+  DisplayTooltip: Greatly increases boat income
   TooltipParent: {fileID: 1347495503}
 --- !u!1 &648201230
 GameObject:
@@ -15189,6 +15189,7 @@ MonoBehaviour:
   FloraBuff: 0
   ClickDamageBuffActive: 0
   FloraDamageBuffActive: 0
+  clickTimer: 0
   HitVFX_1: {fileID: 120407078641315087, guid: 4a62ae9af3b4dd64690a6120f7e9cc44, type: 3}
   HitVFX_2: {fileID: 7662785860385537150, guid: a6e671c1a9ed73441b49d7d10427154c, type: 3}
   HitVFX_3: {fileID: 4520135879870235649, guid: 07e3c6b057811d04ea5e07cd20508d13, type: 3}
@@ -30523,7 +30524,7 @@ MonoBehaviour:
   BoatIncomeMultiplier: 1
   ClickDamageMultiplier: 1
   ClickIncomeMultiplier: 1
-  FloraMultiplier: 2
+  FloraMultiplier: 1
   MonsterDamageMultiplier: 1
   FloraCostMultiplier: 1
   MonsterCoins: 0
@@ -30532,7 +30533,7 @@ MonoBehaviour:
   InstakillClick: 0
   SpellClick: 0
   MonsterBuff: 0
-  FloraDamageBuff: 0
+  FloraDamageBuff: 1
 --- !u!114 &2053228644
 MonoBehaviour:
   m_ObjectHideFlags: 0

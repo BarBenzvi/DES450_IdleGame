@@ -44,7 +44,16 @@ public class MonsterUpgrader : UpgradeButton
 
         if(DamageText)
         {
-            DamageText.text = "Damage: " + m.BaseDamage.ToString();
+            BigNumber damage = m.BaseDamage * GlobalGameData.MonsterDamageMultiplier;
+            if (m.ClickDamageBuffActive)
+            {
+                damage *= 2.5f;
+            }
+            if (m.FloraDamageBuffActive)
+            {
+                damage *= 2.5f;
+            }
+            DamageText.text = "Damage: " + damage.ToString();
         }
         if(AttackSpeedText)
         {
