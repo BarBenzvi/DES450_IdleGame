@@ -12,11 +12,11 @@ public class BasicSkillTreeEffect : SkillTreeEffect
     public float MonsterDamageMultiplier = 1.0f;
     public float FloraCostMultiplier = 1.0f;
     public bool MonsterCoins = false;
+    public bool MonsterAOE = false;
     public bool RareBoats = false;
     public bool InstakillClick = false;
     public bool SpellClick = false;
     public bool MonsterBuff = false;
-    public bool MonsterAOE = false;
 
 
     protected override void ActivateEffects()
@@ -42,6 +42,13 @@ public class BasicSkillTreeEffect : SkillTreeEffect
         if(MonsterCoins)
         {
             GameObject.Find("SeaMonster").GetComponent<MonsterBehavior>().Income = true;
+        }
+
+        if(MonsterAOE)
+        {
+            GameObject m = GameObject.Find("SeaMonster");
+            m.GetComponent<MonsterBehavior>().AOEAttack = true;
+            m.GetComponent<BoxCollider2D>().size *= 3; // Triple collider size so AOE is more impactful
         }
 
         if(RareBoats)

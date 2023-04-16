@@ -117,7 +117,17 @@ public class MonsterBehavior : MonoBehaviour
 
         if(colliding && timer <= 0.0f)
         {
-            currBoat.GetComponent<Health>().ApplyDamage(BaseDamage * GlobalGameData.MonsterDamageMultiplier);
+            if(AOEAttack)
+            {
+                foreach(GameObject boat in currBoats)
+                {
+                    boat.GetComponent<Health>().ApplyDamage(BaseDamage * GlobalGameData.MonsterDamageMultiplier);
+                }
+            }
+            else
+            {
+                currBoat.GetComponent<Health>().ApplyDamage(BaseDamage * GlobalGameData.MonsterDamageMultiplier);
+            }
 
             timer = AttackCooldown;
 
@@ -206,6 +216,14 @@ public class MonsterBehavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(AOEAttack)
+        {
+            if(collision.GetComponent<Health>() != null)
+            {
+                currBoats.Add(collision.gameObject);
+            }
+        }
+
         if(collision.gameObject == currBoat)
         {
             colliding = true;
@@ -214,6 +232,14 @@ public class MonsterBehavior : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (AOEAttack)
+        {
+            if (collision.GetComponent<Health>() != null)
+            {
+                currBoats.Remove(collision.gameObject);
+            }
+        }
+
         if (collision.gameObject == currBoat)
         {
             colliding = false;
