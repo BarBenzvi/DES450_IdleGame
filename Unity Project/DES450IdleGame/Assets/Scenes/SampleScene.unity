@@ -18473,6 +18473,7 @@ MonoBehaviour:
   TimeBetweenIncome: 0.5
   NumText: {fileID: 784960348}
   IncomeText: {fileID: 514203036}
+  MyMultiplier: 1.8
 --- !u!1 &1258987127
 GameObject:
   m_ObjectHideFlags: 0
@@ -18600,6 +18601,7 @@ MonoBehaviour:
   TimeBetweenIncome: 0.5
   NumText: {fileID: 1599811839}
   IncomeText: {fileID: 1814284106}
+  MyMultiplier: 1.8
 --- !u!1 &1279527059
 GameObject:
   m_ObjectHideFlags: 0
@@ -28196,6 +28198,7 @@ MonoBehaviour:
   TimeBetweenIncome: 0.5
   NumText: {fileID: 978658225}
   IncomeText: {fileID: 1549277215}
+  MyMultiplier: 1.8
 --- !u!4 &2067945752
 Transform:
   m_ObjectHideFlags: 0

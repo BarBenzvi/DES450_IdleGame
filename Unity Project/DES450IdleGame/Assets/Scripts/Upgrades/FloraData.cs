@@ -13,6 +13,8 @@ public class FloraData : MonoBehaviour
     public TextMeshProUGUI NumText = null;
     public TextMeshProUGUI IncomeText = null;
 
+    public float MyMultiplier = 1.0f;
+
     float incomeTimer = 0.5f;
 
     // Start is called before the first frame update

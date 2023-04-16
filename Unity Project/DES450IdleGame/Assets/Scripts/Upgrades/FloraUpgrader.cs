@@ -10,6 +10,15 @@ public class FloraUpgrader : UpgradeButton
     public FloraData Flora = null;
     public GameObject ToSpawn = null;
 
+    private void OnEnable()
+    {
+        if(Flora.MyMultiplier != CostMultiplier)
+        {
+            CostMultiplier = Flora.MyMultiplier;
+            FullyRecalculateCost();
+        }
+    }
+
     protected override void UpgradeEffects()
     {
         if(Flora)
