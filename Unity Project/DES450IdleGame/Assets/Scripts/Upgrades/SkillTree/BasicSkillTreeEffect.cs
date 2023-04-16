@@ -16,6 +16,7 @@ public class BasicSkillTreeEffect : SkillTreeEffect
     public bool InstakillClick = false;
     public bool SpellClick = false;
     public bool MonsterBuff = false;
+    public bool MonsterAOE = false;
 
 
     protected override void ActivateEffects()

@@ -18,9 +18,11 @@ public class MonsterBehavior : MonoBehaviour
     public int Level = 1;
 
     public bool Income = false;
+    public bool AOEAttack = false;
 
     Rigidbody2D rb2d = null;
     GameObject currBoat = null;
+    List<GameObject> currBoats = new List<GameObject>();
     float currSpeedMultiplier = 1.0f;
     Vector2 roamPoint = Vector2.zero;
     Vector2 dir = Vector2.zero;

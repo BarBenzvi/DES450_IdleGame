@@ -28,7 +28,7 @@ public class TooltipSpawner : MonoBehaviour
         {
             currTooltip = Instantiate(TooltipPrefab, GameObject.Find("TooltipParent").transform);
             RectTransform crt = currTooltip.GetComponent<RectTransform>();
-            crt.anchoredPosition = (new Vector2(crt.rect.width / 2.0f + rt.rect.width / 2.0f, 0) + TooltipPositionOffset) * TooltipOffsetMultiplier;
+            crt.anchoredPosition = (new Vector2(crt.rect.width / 2.0f + rt.rect.width / 2.0f, rt.anchoredPosition.y) + TooltipPositionOffset) * TooltipOffsetMultiplier;
             TooltipBehavior tb = currTooltip.GetComponent<TooltipBehavior>();
             tb.NameText.text = DisplayName;
             tb.TooltipText.text = DisplayTooltip;
