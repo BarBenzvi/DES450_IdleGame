@@ -17,6 +17,8 @@ public class SpellUIDisplay : MonoBehaviour
     public float IndicatorAlpha = 0.7f;
 
 
+    TooltipSpawner ts = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,12 @@ public class SpellUIDisplay : MonoBehaviour
         s.y = 0;
         CooldownTransform.sizeDelta = s;
         SpellIcon.enabled = false;
+
+        ts = GetComponent<TooltipSpawner>();
+        if(ts != null)
+        {
+            ts.enabled = false;
+        }
     }
 
     // Update is called once per frame
@@ -34,6 +42,9 @@ public class SpellUIDisplay : MonoBehaviour
         if(SManager.ActiveSpells.Count > SpellIndex)
         {
             SpellEffect spell = SManager.ActiveSpells[SpellIndex];
+            ts.enabled = true;
+            ts.DisplayName = spell.GetComponent<TooltipSpawner>().DisplayName;
+            ts.DisplayTooltip = spell.GetComponent<TooltipSpawner>().DisplayTooltip;
 
             SpellIcon.sprite = spell.Icon;
             SpellIcon.enabled = true;
