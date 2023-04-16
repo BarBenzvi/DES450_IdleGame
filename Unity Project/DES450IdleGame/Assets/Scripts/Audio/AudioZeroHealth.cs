@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AudioZeroHealth : MonoBehaviour
 {
+    public GameObject BoatExplodeVFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,11 @@ public class AudioZeroHealth : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().BoatDeath();
         }
+
+        GameObject explodeVFX = Instantiate(BoatExplodeVFX);
+        explodeVFX.GetComponent<ParticleSystem>().Play();
+        explodeVFX.GetComponentInChildren<ParticleSystem>().Play();
+        explodeVFX.transform.position = gameObject.transform.position;
     }
 
     void HealthReduced()

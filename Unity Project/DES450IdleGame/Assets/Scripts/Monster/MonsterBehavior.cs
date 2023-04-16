@@ -27,6 +27,11 @@ public class MonsterBehavior : MonoBehaviour
     bool colliding = false;
     float timer = 0.0f;
 
+    public GameObject HitVFX_1;
+    public GameObject HitVFX_2;
+    public GameObject HitVFX_3;
+    public GameObject HitVFX_4;
+
     void Start()
     {
         roamPoint.x = Random.Range(-WorldExtents.x, WorldExtents.x);
@@ -113,6 +118,73 @@ public class MonsterBehavior : MonoBehaviour
             currBoat.GetComponent<Health>().ApplyDamage(BaseDamage * GlobalGameData.MonsterDamageMultiplier);
 
             timer = AttackCooldown;
+
+            AttackVFX();
+        }
+    }
+
+    void AttackVFX()
+    {
+        if (Level < 10)
+        {
+            GameObject vfx = Instantiate(HitVFX_1, transform);
+            vfx.transform.position = gameObject.transform.position;
+            vfx.transform.localPosition = new Vector3(0.79f, 0.23f, 0f);
+            vfx.GetComponent<ParticleSystem>().Play();
+        }
+
+        if (Level >= 10 && Level < 20)
+        {
+            GameObject vfx = Instantiate(HitVFX_1, transform);
+            vfx.transform.position = gameObject.transform.position;
+            vfx.transform.localPosition = new Vector3(0.79f, 0.23f, 0f);
+            vfx.GetComponent<ParticleSystem>().Play();
+
+            GameObject vfx2 = Instantiate(HitVFX_2, transform);
+            vfx2.transform.position = gameObject.transform.position;
+            vfx2.transform.localPosition = new Vector3(0.79f, 0.23f, 0f);
+            vfx2.GetComponent<ParticleSystem>().Play();
+        }
+
+        if (Level >= 20 && Level < 30)
+        {
+            GameObject vfx = Instantiate(HitVFX_1, transform);
+            vfx.transform.position = gameObject.transform.position;
+            vfx.transform.localPosition = new Vector3(0.79f, 0.23f, 0f);
+            vfx.GetComponent<ParticleSystem>().Play();
+
+            GameObject vfx2 = Instantiate(HitVFX_2, transform);
+            vfx2.transform.position = gameObject.transform.position;
+            vfx2.transform.localPosition = new Vector3(0.79f, 0.23f, 0f);
+            vfx2.GetComponent<ParticleSystem>().Play();
+
+            GameObject vfx3 = Instantiate(HitVFX_3, transform);
+            vfx3.transform.position = gameObject.transform.position;
+            vfx3.transform.localPosition = new Vector3(0.79f, 0.23f, 0f);
+            vfx3.GetComponent<ParticleSystem>().Play();
+        }
+
+        if (Level >= 30)
+        {
+            GameObject vfx = Instantiate(HitVFX_1, transform);
+            vfx.transform.position = gameObject.transform.position;
+            vfx.transform.localPosition = new Vector3(0.79f, 0.23f, 0f);
+            vfx.GetComponent<ParticleSystem>().Play();
+
+            GameObject vfx2 = Instantiate(HitVFX_2, transform);
+            vfx2.transform.position = gameObject.transform.position;
+            vfx2.transform.localPosition = new Vector3(0.79f, 0.23f, 0f);
+            vfx2.GetComponent<ParticleSystem>().Play();
+
+            GameObject vfx3 = Instantiate(HitVFX_3, transform);
+            vfx3.transform.position = gameObject.transform.position;
+            vfx3.transform.localPosition = new Vector3(0.79f, 0.23f, 0f);
+            vfx3.GetComponent<ParticleSystem>().Play();
+
+            GameObject vfx4 = Instantiate(HitVFX_4, transform);
+            vfx4.transform.position = gameObject.transform.position;
+            vfx4.transform.localPosition = new Vector3(0.79f, 0.23f, 0f);
+            vfx4.GetComponent<ParticleSystem>().Play();
         }
     }
 

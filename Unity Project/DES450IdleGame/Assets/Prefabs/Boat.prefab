@@ -188,3 +188,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5374491b3bbd46a4194813df8d1ab9d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BoatExplodeVFX: {fileID: 4137925239064359003, guid: 5426b4e5a4c60fb4482f9c900d492ef5, type: 3}
