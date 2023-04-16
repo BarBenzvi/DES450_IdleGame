@@ -14,6 +14,8 @@ public class TooltipSpawner : MonoBehaviour
     [TextArea]
     public string DisplayTooltip = "Lorem ipsum...";
 
+    public Transform TooltipParent = null;
+
     GameObject currTooltip = null;
     RectTransform rt;
 
@@ -24,9 +26,9 @@ public class TooltipSpawner : MonoBehaviour
 
     public void SpawnTooltip()
     {
-        if(currTooltip == null)
+        if(currTooltip == null && enabled)
         {
-            currTooltip = Instantiate(TooltipPrefab, GameObject.Find("TooltipParent").transform);
+            currTooltip = Instantiate(TooltipPrefab, TooltipParent);
             RectTransform crt = currTooltip.GetComponent<RectTransform>();
             crt.anchoredPosition = (new Vector2(rt.anchoredPosition.x + crt.rect.width / 2.0f + rt.rect.width / 2.0f, rt.anchoredPosition.y) + TooltipPositionOffset) * TooltipOffsetMultiplier;
             TooltipBehavior tb = currTooltip.GetComponent<TooltipBehavior>();
@@ -37,7 +39,7 @@ public class TooltipSpawner : MonoBehaviour
 
     public void DestroyTooltip()
     {
-        if(currTooltip != null)
+        if(currTooltip != null && enabled)
         {
             Destroy(currTooltip);
             currTooltip = null;
