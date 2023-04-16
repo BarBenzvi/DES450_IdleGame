@@ -6,9 +6,13 @@ public class CursorBehavior : MonoBehaviour
 {
     public BigNumber CoinsPerClick = new BigNumber(1, 0);
     public BigNumber DamagePerClick = new BigNumber(1, 0);
+    public bool Instakill = false;
+    public bool SpellClick = false;
+    public bool MonsterBuff = false;
 
     int collidingUIZones = 0;
     Health collidingBoat = null;
+    MonsterBehavior collidingMonster = null;
 
     void Update()
     {
@@ -25,11 +29,36 @@ public class CursorBehavior : MonoBehaviour
                 // If clicking on a boat, deal damage. otherwise increase coins
                 if (collidingBoat)
                 {
-                    collidingBoat.ApplyDamage(DamagePerClick * GlobalGameData.ClickDamageMultiplier);
+                    BigNumber damage = DamagePerClick * GlobalGameData.ClickDamageMultiplier;
+                    if (Instakill)
+                    {
+                        if(Random.Range(0, 100) == 99)
+                        {
+                            // Deal maximum damage to insure instant kill
+                            damage = collidingBoat.StartHealth;
+                        }
+                    }
+                    collidingBoat.ApplyDamage(damage);
                 }
-                else
+                else // If clicking on the ocean, gain coins (and check for spell click)
                 {
                     GlobalGameData.Coins += CoinsPerClick * GlobalGameData.ClickIncomeMultiplier * GlobalGameData.GlobalCurrencyMultiplier;
+                    if(SpellClick)
+                    {
+                        List<SpellEffect> spells = FindObjectOfType<SpellManager>().ActiveSpells;
+                        foreach(SpellEffect spell in spells)
+                        {
+                            if(!spell.Active)
+                            {
+                                spell.Timer *= 0.99f;
+                            }
+                        }
+                    }
+                }
+
+                if(collidingMonster && MonsterBuff)
+                {
+                    // Give monster the temporary damage boost
                 }
             }
         }
@@ -48,6 +77,12 @@ public class CursorBehavior : MonoBehaviour
             {
                 collidingBoat = hp;
             }
+
+            MonsterBehavior mb = collision.GetComponent<MonsterBehavior>();
+            if(mb != null)
+            {
+                collidingMonster = mb;
+            }
         }
     }
 
@@ -63,6 +98,12 @@ public class CursorBehavior : MonoBehaviour
             if (hp == collidingBoat)
             {
                 collidingBoat = null;
+            }
+
+            MonsterBehavior mb = collision.GetComponent<MonsterBehavior>();
+            if (mb == collidingMonster)
+            {
+                collidingMonster = null;
             }
         }
     }

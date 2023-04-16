@@ -13,6 +13,9 @@ public class BasicSkillTreeEffect : SkillTreeEffect
     public float FloraCostMultiplier = 1.0f;
     public bool MonsterCoins = false;
     public bool RareBoats = false;
+    public bool InstakillClick = false;
+    public bool SpellClick = false;
+    public bool MonsterBuff = false;
 
 
     protected override void ActivateEffects()
@@ -43,6 +46,21 @@ public class BasicSkillTreeEffect : SkillTreeEffect
         if(RareBoats)
         {
             GameObject.Find("BoatSpawner").GetComponent<BoatSpawner>().RareBoats = true;
+        }
+
+        if(InstakillClick)
+        {
+            GameObject.Find("Cursor").GetComponent<CursorBehavior>().Instakill = true;
+        }
+
+        if (SpellClick)
+        {
+            GameObject.Find("Cursor").GetComponent<CursorBehavior>().SpellClick = true;
+        }
+
+        if(MonsterBuff)
+        {
+            GameObject.Find("Cursor").GetComponent<CursorBehavior>().MonsterBuff = true;
         }
     }
 }

@@ -1891,6 +1891,9 @@ MonoBehaviour:
   FloraCostMultiplier: 1
   MonsterCoins: 0
   RareBoats: 0
+  InstakillClick: 0
+  SpellClick: 0
+  MonsterBuff: 0
 --- !u!1 &177340018
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,6 +2142,60 @@ MonoBehaviour:
   FloraCostMultiplier: 1
   MonsterCoins: 0
   RareBoats: 0
+  InstakillClick: 0
+  SpellClick: 0
+  MonsterBuff: 0
+--- !u!1 &180583218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 180583220}
+  - component: {fileID: 180583219}
+  m_Layer: 0
+  m_Name: SpellManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &180583219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180583218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af165b3ae6128d24daab37e8cc9f3fec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpellList: []
+  ActiveSpells: []
+--- !u!4 &180583220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180583218}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 927139452}
+  - {fileID: 642315116}
+  - {fileID: 210382808}
+  - {fileID: 1830400750}
+  - {fileID: 329574095}
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &187663394
 GameObject:
   m_ObjectHideFlags: 0
@@ -2475,6 +2532,58 @@ MonoBehaviour:
     tenpow: 0
   Flora: {fileID: 2067945751}
   ToSpawn: {fileID: 0}
+--- !u!1 &210382807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 210382808}
+  - component: {fileID: 210382809}
+  m_Layer: 0
+  m_Name: BoatSwarm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &210382808
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210382807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 180583220}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &210382809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210382807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edce3dc8a96706c4f8fee361f6c065d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cooldown: 600
+  ActiveTime: 60
+  Icon: {fileID: 0}
+  Active: 0
+  Timer: 0
+  GlobalIncomeMulitplier: 1
+  BoatSpawnrateMultiplier: 2
+  FloraMultiplier: 1
 --- !u!1 &217948400
 GameObject:
   m_ObjectHideFlags: 0
@@ -2850,6 +2959,9 @@ MonoBehaviour:
   FloraCostMultiplier: 0.85
   MonsterCoins: 0
   RareBoats: 0
+  InstakillClick: 0
+  SpellClick: 0
+  MonsterBuff: 0
 --- !u!1 &239171610
 GameObject:
   m_ObjectHideFlags: 0
@@ -3987,6 +4099,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327772059}
   m_CullTransparentMesh: 1
+--- !u!1 &329574094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 329574095}
+  - component: {fileID: 329574096}
+  m_Layer: 0
+  m_Name: RoughSeas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &329574095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329574094}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 180583220}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &329574096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329574094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9b297915e5ee140a9baf4baa5a5380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cooldown: 300
+  ActiveTime: 0
+  Icon: {fileID: 0}
+  Active: 0
+  Timer: 0
 --- !u!1 &336241921
 GameObject:
   m_ObjectHideFlags: 0
@@ -6406,6 +6567,9 @@ MonoBehaviour:
   FloraCostMultiplier: 1
   MonsterCoins: 0
   RareBoats: 1
+  InstakillClick: 0
+  SpellClick: 0
+  MonsterBuff: 0
 --- !u!1 &464106092
 GameObject:
   m_ObjectHideFlags: 0
@@ -6607,6 +6771,9 @@ MonoBehaviour:
   FloraCostMultiplier: 1
   MonsterCoins: 0
   RareBoats: 0
+  InstakillClick: 0
+  SpellClick: 0
+  MonsterBuff: 0
 --- !u!1 &504843110
 GameObject:
   m_ObjectHideFlags: 0
@@ -8414,6 +8581,9 @@ MonoBehaviour:
   FloraCostMultiplier: 1
   MonsterCoins: 0
   RareBoats: 0
+  InstakillClick: 0
+  SpellClick: 0
+  MonsterBuff: 0
 --- !u!1 &569105728
 GameObject:
   m_ObjectHideFlags: 0
@@ -10298,6 +10468,58 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &642315115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 642315116}
+  - component: {fileID: 642315117}
+  m_Layer: 0
+  m_Name: Bloom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &642315116
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642315115}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 180583220}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &642315117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642315115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edce3dc8a96706c4f8fee361f6c065d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cooldown: 600
+  ActiveTime: 60
+  Icon: {fileID: 0}
+  Active: 0
+  Timer: 0
+  GlobalIncomeMulitplier: 1
+  BoatSpawnrateMultiplier: 1
+  FloraMultiplier: 5
 --- !u!1 &643021111
 GameObject:
   m_ObjectHideFlags: 0
@@ -10464,6 +10686,9 @@ MonoBehaviour:
   FloraCostMultiplier: 1
   MonsterCoins: 0
   RareBoats: 0
+  InstakillClick: 0
+  SpellClick: 0
+  MonsterBuff: 0
 --- !u!1 &648201230
 GameObject:
   m_ObjectHideFlags: 0
@@ -10629,6 +10854,9 @@ MonoBehaviour:
   FloraCostMultiplier: 1
   MonsterCoins: 1
   RareBoats: 0
+  InstakillClick: 0
+  SpellClick: 0
+  MonsterBuff: 0
 --- !u!1 &649273898
 GameObject:
   m_ObjectHideFlags: 0
@@ -11023,13 +11251,16 @@ MonoBehaviour:
   Purchased: 0
   GlobalCurrencyMultiplier: 1
   BoatIncomeMultiplier: 1
-  ClickDamageMultiplier: 3
+  ClickDamageMultiplier: 1
   ClickIncomeMultiplier: 1
   FloraMultiplier: 1
   MonsterDamageMultiplier: 1
   FloraCostMultiplier: 1
   MonsterCoins: 0
   RareBoats: 0
+  InstakillClick: 0
+  SpellClick: 0
+  MonsterBuff: 1
 --- !u!1 &663458765
 GameObject:
   m_ObjectHideFlags: 0
@@ -11272,6 +11503,9 @@ MonoBehaviour:
   FloraCostMultiplier: 1
   MonsterCoins: 0
   RareBoats: 0
+  InstakillClick: 0
+  SpellClick: 0
+  MonsterBuff: 0
 --- !u!1 &694192711
 GameObject:
   m_ObjectHideFlags: 0
@@ -13648,6 +13882,9 @@ MonoBehaviour:
   DamagePerClick:
     multiplier: 1
     tenpow: 0
+  Instakill: 0
+  SpellClick: 0
+  MonsterBuff: 0
 --- !u!1 &863530041
 GameObject:
   m_ObjectHideFlags: 0
@@ -14931,6 +15168,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922690873}
   m_CullTransparentMesh: 1
+--- !u!1 &927139451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 927139452}
+  - component: {fileID: 927139453}
+  m_Layer: 0
+  m_Name: CashGrab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &927139452
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927139451}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 180583220}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &927139453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927139451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edce3dc8a96706c4f8fee361f6c065d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cooldown: 120
+  ActiveTime: 30
+  Icon: {fileID: 0}
+  Active: 0
+  Timer: 0
+  GlobalIncomeMulitplier: 3
+  BoatSpawnrateMultiplier: 1
+  FloraMultiplier: 1
 --- !u!1 &949470524
 GameObject:
   m_ObjectHideFlags: 0
@@ -15089,12 +15378,15 @@ MonoBehaviour:
   GlobalCurrencyMultiplier: 1
   BoatIncomeMultiplier: 1
   ClickDamageMultiplier: 1
-  ClickIncomeMultiplier: 3
+  ClickIncomeMultiplier: 1
   FloraMultiplier: 1
   MonsterDamageMultiplier: 1
   FloraCostMultiplier: 1
   MonsterCoins: 0
   RareBoats: 0
+  InstakillClick: 0
+  SpellClick: 1
+  MonsterBuff: 0
 --- !u!1 &949568599
 GameObject:
   m_ObjectHideFlags: 0
@@ -15261,6 +15553,9 @@ MonoBehaviour:
   FloraCostMultiplier: 1
   MonsterCoins: 0
   RareBoats: 0
+  InstakillClick: 0
+  SpellClick: 0
+  MonsterBuff: 0
 --- !u!1 &961768081
 GameObject:
   m_ObjectHideFlags: 0
@@ -17471,13 +17766,16 @@ MonoBehaviour:
   Purchased: 0
   GlobalCurrencyMultiplier: 1
   BoatIncomeMultiplier: 1
-  ClickDamageMultiplier: 3
+  ClickDamageMultiplier: 1
   ClickIncomeMultiplier: 1
   FloraMultiplier: 1
   MonsterDamageMultiplier: 1
   FloraCostMultiplier: 1
   MonsterCoins: 0
   RareBoats: 0
+  InstakillClick: 1
+  SpellClick: 0
+  MonsterBuff: 0
 --- !u!1 &1133283773
 GameObject:
   m_ObjectHideFlags: 0
@@ -18144,7 +18442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1248710422
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22058,6 +22356,9 @@ MonoBehaviour:
   FloraCostMultiplier: 1
   MonsterCoins: 0
   RareBoats: 0
+  InstakillClick: 0
+  SpellClick: 0
+  MonsterBuff: 0
 --- !u!1 &1521474432
 GameObject:
   m_ObjectHideFlags: 0
@@ -25138,6 +25439,9 @@ MonoBehaviour:
   FloraCostMultiplier: 1
   MonsterCoins: 0
   RareBoats: 0
+  InstakillClick: 0
+  SpellClick: 0
+  MonsterBuff: 0
 --- !u!1 &1777265534
 GameObject:
   m_ObjectHideFlags: 0
@@ -25543,6 +25847,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823628288}
   m_CullTransparentMesh: 1
+--- !u!1 &1830400749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1830400750}
+  - component: {fileID: 1830400751}
+  m_Layer: 0
+  m_Name: Doppelganger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1830400750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830400749}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 180583220}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1830400751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830400749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e746bd0f8abe5fa4a8348f78ec7536d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cooldown: 300
+  ActiveTime: 60
+  Icon: {fileID: 0}
+  Active: 0
+  Timer: 0
+  DoppelTint: {r: 0.9528302, g: 0.6687789, b: 0.6687789, a: 1}
 --- !u!1 &1838136376
 GameObject:
   m_ObjectHideFlags: 0
@@ -26702,6 +27056,9 @@ MonoBehaviour:
   FloraCostMultiplier: 1
   MonsterCoins: 0
   RareBoats: 0
+  InstakillClick: 0
+  SpellClick: 0
+  MonsterBuff: 0
 --- !u!114 &1934344296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28162,6 +28519,9 @@ MonoBehaviour:
   FloraCostMultiplier: 1
   MonsterCoins: 0
   RareBoats: 0
+  InstakillClick: 0
+  SpellClick: 0
+  MonsterBuff: 0
 --- !u!1 &2067945750
 GameObject:
   m_ObjectHideFlags: 0
