@@ -2174,7 +2174,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af165b3ae6128d24daab37e8cc9f3fec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpellList: []
+  SpellList:
+  - {fileID: 927139453}
+  - {fileID: 642315117}
+  - {fileID: 210382809}
+  - {fileID: 1830400751}
+  - {fileID: 329574096}
   ActiveSpells: []
 --- !u!4 &180583220
 Transform:
@@ -18442,7 +18447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1248710422
 RectTransform:
   m_ObjectHideFlags: 0
