@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 40849
+  controlID: 57968
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,10 +223,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 26d5ffffd0e5ffffcefaffff72ab0000
+      scrollPos: {x: 0, y: 828}
+      m_SelectedIDs: 94940100
+      m_LastClickedID: 103572
+      m_ExpandedIDs: 14b3fcff26d5ffffd0e5ffffcefaffff72ab000086900100f49201009c930100ee9301006294010096950100f896010092970100ca98010058990100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -558,9 +558,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.86094016, y: 0.6615055, z: 115.834015}
+    m_Target: {x: -1.7544045, y: 0.35072064, z: 115.42151}
     speed: 2
-    m_Value: {x: -0.86094016, y: 0.6615055, z: 115.834015}
+    m_Value: {x: -1.7544045, y: 0.35072064, z: 115.42151}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -611,9 +611,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.5171847
+    m_Target: 6.207756
     speed: 2
-    m_Value: 6.5171847
+    m_Value: 6.207756
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -815,22 +815,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/VFX
+    - Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Nature
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/VFX
+  - Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Nature
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Menir\Documents\GitHub\DES450_IdleGame\Unity Project\DES450IdleGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 207}
-    m_SelectedIDs: 46b20000
-    m_LastClickedID: 45638
-    m_ExpandedIDs: 000000007e6a0000806a0000826a0000a66a000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 0ca50000
+    m_LastClickedID: 42252
+    m_ExpandedIDs: 000000007e6a0000806a0000826a000096a4000096a50000b8a5000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -883,9 +883,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 94940100
+    m_LastClickedInstanceID: 103572
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000c482000000000000806200001a6e00007e2d0100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1163,8 +1163,8 @@ MonoBehaviour:
     y: 0
     width: 455
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -1205,7 +1205,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 1061
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
